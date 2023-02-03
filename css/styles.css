@@ -306,6 +306,11 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	
+}
+
+.item .item-number h5 {
+	margin: 0;
 	font-family: 'Montserrat';
 	font-style: normal;
 	font-weight: 700;
@@ -313,10 +318,6 @@
 	line-height: 24px;
 	letter-spacing: 0.1px;
 	color: #E74040;
-}
-
-.item .item-number h5 {
-	margin: 0;
 }
 
 .item .item-text {
