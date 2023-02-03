@@ -214,11 +214,12 @@
 
 .section-image-and-text {
 	padding-top: 160px;
+	padding-bottom: 160px;
 }
 
 .section-image-and-text .row {
-	margin-left: 195px;
-	margin-right: 195px;
+	margin-left: 112px;
+	margin-right: 112px;
 }
 
 @media only screen and (max-width: 991px) {
@@ -288,6 +289,7 @@
 	line-height: 20px;
 	letter-spacing: 0.2px;
 	color: #737373;
+	max-width: 350px;
 }
 
 .section-image-and-text--text-items .item {
@@ -343,4 +345,110 @@
 	line-height: 16px;
 	letter-spacing: 0.2px;
 	color: #737373;
+}
+
+/* section-cards */
+
+.section-cards {
+	padding-top: 112px;
+	padding-bottom: 112px;
+}
+
+.section-cards .intro {
+	max-width: 691px;
+	padding-bottom: 70px;
+}
+
+.section-cards .row {
+	margin-left: 120px;
+	margin-right: 120px;
+}
+
+@media only screen and (max-width: 991px) {
+	.section-cards .row {
+		margin-left: unset;
+		margin-right: unset;
+	}
+}
+
+.section-cards-label {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 24px;
+	letter-spacing: 0.2px;
+	color: #FF6551;
+	margin-bottom: 10px;
+}
+
+.section-cards-header {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 40px;
+	line-height: 50px;
+	letter-spacing: 0.2px;
+	color: #252B42;
+	margin-bottom: 10px;
+}
+
+.section-cards-description {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: 0.2px;
+	color: #737373;
+}
+
+.section-cards .col-lg-3:nth-child(2n) {
+	padding-top: 40px;
+}
+
+/* card */
+
+.cool-card {
+	padding: 40px;
+	background: #FFFFFF;
+	box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
+}
+
+.cool-card-icon {
+	background: #E74040;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 22px 19px;
+	width: fit-content;
+	margin-bottom: 42px;
+}
+
+.cool-card-icon img {
+	width: 32px;
+	height: auto;
+}
+
+.cool-card-header {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 0.1px;
+	color: #252B42;
+	margin-bottom: 42px;
+	position: relative;
+}
+
+.cool-card-header::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -20px;
+	width: 50px;
+	height: 2px;
+	background: #E74040;
 }
