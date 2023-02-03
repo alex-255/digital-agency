@@ -1,0 +1,211 @@
+.menu-bar {
+	background-color: #E74040;
+}
+
+.menu-bar .row {
+	min-height: 91px;
+	text-align: center;
+}
+
+.logo-area {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.menu-area {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.menu-area a, .login-area a {
+	color: #FFFFFF;
+	font-family: 'Montserrat', sans-serif;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 18px;
+	text-align: center;
+	letter-spacing: 0.2px;
+	margin-right: 21px;
+	text-decoration: none;
+	display: inline-block;
+	border-bottom: 2px dotted transparent;
+	transition: border-bottom 0.3s;
+}
+
+.menu-area a:hover,  .login-area a:hover {
+	border-bottom: 2px dotted #FFFFFF;
+}
+
+.login-area {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.login-area a.login-link-button {
+	margin: 0 23px;
+	text-transform: uppercase;
+	padding: 15px 25px 15px 25px;
+	background-color: #FF6551;
+	border-radius: 5px;
+	white-space: nowrap;
+	border-bottom: none;
+	text-decoration: none;
+	display: flex;
+	transition: padding-right 0.2s, box-shadow 0.2s;
+}
+
+.login-area a.login-link-button:hover {
+	padding-right: 20px;
+	box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.2);
+	
+}
+
+.login-area a.login-link-button::after {
+	content: "\F135";
+	font-family: bootstrap-icons;
+	font-size: 18px;
+	margin-left: 10px;
+	transition: margin-left 0.2s, transform 0.2s;
+	
+}
+
+.login-area a.login-link-button:hover::after {
+	margin-left: 15px;
+	transform: scale(1.2);
+}
+
+/* hero */
+
+.hero {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: stretch;
+	min-height: 682px;
+	background-color: transparent;
+	position: relative;
+}
+
+.hero-background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	background-color: #E74040;
+	clip-path: polygon(0% 85%, 25% 94%, 50% 90%, 75% 90%,  100% 94%, 100% 0%, 0% 0%);
+}
+
+.hero .row {
+	min-height: 682px;
+	align-items: center;
+}
+
+.hero-text {
+	height: 100%;
+	padding-left: 132px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	color: #FFFFFF;
+}
+
+@media only screen and (max-width: 991px) {
+	.hero-text {
+		margin-left: unset;
+		min-height: unset;
+		padding: 10vw;
+	}
+}
+
+.hero-text-slogan {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 0.1px;
+	margin-bottom: 30px;
+}
+
+.hero-text-header {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 58px;
+	line-height: 80px;
+	letter-spacing: 0.2px;
+	margin-bottom: 30px;
+}
+
+.hero-text-description {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 30px;
+	letter-spacing: 0.2px;
+	margin-bottom: 30px;
+	max-width: 338px;
+}
+
+.hero-text-buttons {
+	display: flex;
+	justify-content: flex-start;
+}
+
+.hero-text-link-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 15px 40px;
+	background: #FF6551;
+	border-radius: 5px;
+	color: white;
+	text-decoration: none;
+	transition: box-shadow 0.3s, border 0.3s;
+	border: 1px solid transparent;
+	margin-right: 10px;
+}
+
+.hero-text-link-button:hover {
+	box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.2);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.hero-text-link-button-more {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 15px 40px;
+	background: transparent;
+	border-radius: 5px;
+	color: white;
+	text-decoration: none;
+	transition: all 0.3s;
+	position: relative;
+	border: 1px solid #FF6551;
+}
+
+.hero-text-link-button-more:hover {
+	background-color: rgba(255, 255, 255, 0.05);
+	border: 1px solid #FFFFFF;
+	box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.2);
+}
+
+.hero-picture {
+	min-height: 682px;
+	overflow: hidden;
+}
+
+.hero-picture img {
+	height: 100%;
+	width: auto;
+	display: block;
+}
