@@ -55,13 +55,14 @@
 	border-bottom: none;
 	text-decoration: none;
 	display: flex;
+	border: 1px solid transparent;
 	transition: padding-right 0.2s, box-shadow 0.2s;
 }
 
 .login-area a.login-link-button:hover {
 	padding-right: 20px;
 	box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.2);
-	
+	border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .login-area a.login-link-button::after {
@@ -615,12 +616,13 @@
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: flex-start;
-	padding-top: 25px;
+	padding: 25px;
 }
 
 .sales-card-text .course-type-and-rating {
 	display: flex;
 	align-items: center;
+	margin-bottom: 10px;
 }
 
 .sales-card-text .course-type {
@@ -654,4 +656,126 @@
 
 .sales-card-text .course-rating img {
 	margin-right: 5px;
+}
+
+.sales-card-text .course-header {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 0.1px;
+	color: #252B42;
+	margin-bottom: 10px;
+}
+
+.sales-card-text .course-description {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: 0.2px;
+	color: #737373;
+	margin-bottom: 10px;
+}
+
+.sales-card-text .course-count {
+	margin-left: 26px;
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 24px;
+	letter-spacing: 0.2px;
+	color: #737373;
+	position: relative;
+	margin-bottom: 10px;
+}
+
+.sales-card-text .course-count::after {
+	position: absolute;
+	content: "\F30A";
+	font-family: "bootstrap-icons";
+	font-size: 16px;
+	top: 50%;
+	transform: translate(0%, -50%);
+	left: -26px;
+}
+
+.sales-card-text .price {
+	display: flex;
+	justify-content: flex-start;
+	margin-bottom: 10px;
+}
+
+.sales-card-text .price-regular {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 24px;
+	text-align: center;
+	letter-spacing: 0.1px;
+	color: #BDBDBD;
+	margin-right: 5px;
+	text-decoration: line-through;
+}
+
+.sales-card-text .price-reduced {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 24px;
+	text-align: center;
+	letter-spacing: 0.1px;
+	color: #2435A1;
+}
+
+.sales-card-text .course-button-more {
+	padding: 10px 40px 10px 20px;
+	border: 1px solid #FF6551;
+	border-radius: 37px;
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	transition: border 0.3s, background-color 0.3s;
+}
+
+.sales-card-text .course-button-more:hover {
+	border: 1px solid #FFFFFF;
+	background-color: #FF6551;
+}
+
+.sales-card-text .course-button-more h6 {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 24px;
+	letter-spacing: 0.2px;
+	color: #FF6551;
+	margin: 0;
+	position: relative;
+	transition: color 0.3s;
+}
+
+.sales-card-text .course-button-more:hover h6 {
+	color: #FFFFFF;
+}
+
+.sales-card-text .course-button-more h6::after {
+	content: "\F285";
+	font-family: "bootstrap-icons";
+	font-size: 16px;
+	position: absolute;
+	right: -20px;
+	top: 50%;
+	transform: translate(0%, -50%);
+	transition: right 0.3s;
+}
+
+.sales-card-text .course-button-more:hover h6::after {
+	right: -25px;
 }
