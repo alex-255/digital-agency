@@ -452,3 +452,206 @@
 	height: 2px;
 	background: #E74040;
 }
+
+/* section-sales */
+
+.section-sales {
+	padding-top: 112px;
+	padding-bottom: 112px;
+}
+
+.section-sales .intro {
+	max-width: 691px;
+	padding-bottom: 112px;
+}
+
+.section-sales .row {
+	margin-left: 120px;
+	margin-right: 120px;
+}
+
+@media only screen and (max-width: 991px) {
+	.section-cards .row {
+		margin-left: unset;
+		margin-right: unset;
+	}
+}
+
+.section-sales-label {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 24px;
+	letter-spacing: 0.2px;
+	color: #FF6551;
+	margin-bottom: 10px;
+}
+
+.section-sales-header {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 40px;
+	line-height: 50px;
+	letter-spacing: 0.2px;
+	color: #252B42;
+	margin-bottom: 10px;
+}
+
+.section-sales-description {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: 0.2px;
+	color: #737373;
+}
+
+/* .sales-card */
+
+.sales-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+.section-sales .col-lg-3:nth-child(1) .sales-card-image {
+	background-image: url(../images/sales-books.png);
+	min-height: 300px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.section-sales .col-lg-3:nth-child(2) .sales-card-image {
+	background-image: url(../images/sales-second.png);
+	min-height: 300px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.section-sales .col-lg-3:nth-child(3) .sales-card-image {
+	background-image: url(../images/sales-pensils.png);
+	min-height: 300px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.section-sales .col-lg-3:nth-child(4) .sales-card-image {
+	background-image: url(../images/sales-fourth.png);
+	min-height: 300px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.sales-card-image {
+	position: relative;
+}
+
+.sales-card-image-label {
+	position: relative;
+	top: 20px;
+	left: 20px;
+	padding: 0 10px;
+	background: #E74040;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+	border-radius: 3px;
+	display: inline-flex;
+}
+
+.sales-card-image-label h6 {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 24px;
+	text-align: center;
+	letter-spacing: 0.2px;
+	color: #FFFFFF;
+	margin: 0;
+}
+
+.sales-card-image-icons {
+	position: absolute;
+	bottom: 24px;
+	left: 50%;
+	transform: translate(-50%);
+	display: flex;
+}
+
+.sales-card-image-icons .bi {
+	width: 40px;
+	height: 40px;
+	color: #252B42;
+	background-color: #FFFFFF;
+	border-radius: 100%;
+	margin-right: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: color 0.3s, background-color 0.3s;
+}
+
+.sales-card-image-icons .bi:hover {
+	color: #FFFFFF;
+	background-color: #252B42;
+}
+
+.sales-card-image-icons .bi::before {
+	font-size: 20px;
+}
+
+.sales-card-image-icons .bi:last-of-type {
+	margin-right: 0;
+}
+
+.sales-card-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	padding-top: 25px;
+}
+
+.sales-card-text .course-type-and-rating {
+	display: flex;
+	align-items: center;
+}
+
+.sales-card-text .course-type {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 24px;
+	letter-spacing: 0.2px;
+	color: #FF6551;
+	margin-right: 10px;
+	text-decoration: none;
+}
+
+.sales-card-text .course-rating {
+	background: #26335D;
+	border-radius: 20px;
+	padding: 5px 5px 5px 5px;
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 16px;
+	letter-spacing: 0.2px;
+	color: #FFFFFF;
+	text-decoration: none;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.sales-card-text .course-rating img {
+	margin-right: 5px;
+}
