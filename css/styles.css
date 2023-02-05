@@ -1007,3 +1007,147 @@
 	letter-spacing: 0.2px;
 	color: #737373;
 }
+
+/* .section-team */
+
+
+.section-team .intro {
+	max-width: 691px;
+	padding-bottom: 96px;
+}
+
+.section-team-label {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 24px;
+	letter-spacing: 0.2px;
+	color: #FF6551;
+	margin-bottom: 10px;
+}
+
+.section-team-header {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 40px;
+	line-height: 50px;
+	letter-spacing: 0.2px;
+	color: #252B42;
+	margin-bottom: 10px;
+}
+
+.section-team-description {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: 0.2px;
+	color: #737373;
+}
+
+/* .team-card */
+
+.team-card {
+	background: #FFFFFF;
+	box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
+	border-radius: 20px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	margin-top: 112px;
+	margin-bottom: 112px;
+}
+
+@media only screen and (max-width: 991px) {
+	.team-card {
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+}
+
+.section-team .row {
+	margin-left: 112px;
+	margin-right: 112px;
+}
+
+@media only screen and (max-width: 991px) {
+	.section-team .row {
+		margin-left: unset;
+		margin-right: unset;
+	}
+}
+
+.team-card-image {
+	display: flex;
+	justify-content: center;
+}
+
+.team-card-image img {
+	height: 231px;
+	width: auto;
+}
+
+.team-card-text {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 30px;
+}
+
+.team-card-name {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 24px;
+	text-align: center;
+	letter-spacing: 0.1px;
+	color: #252B42;
+	margin-bottom: 10px;
+}
+
+.team-card-occupation {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 16px;
+	text-align: center;
+	letter-spacing: 0.2px;
+	color: #737373;
+	margin-bottom: 10px;
+}
+
+.team-card-icons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.team-card-icons .bi {
+	color: #FF6551;
+	border-radius: 100%;
+	padding: 5px;
+	margin-right: 10px;
+	transition: all 0.3s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.team-card-icons .bi:hover {
+	color: #FFFFFF;
+	background-color: #FF6551;
+	transform: scale(1.5);
+}
+
+.team-card-icons .bi::before {
+	font-size: 23px;
+}
+
+.team-card-icons .bi:last-child {
+	margin-right: 0;
+}
