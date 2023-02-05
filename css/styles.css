@@ -882,3 +882,128 @@
 	right: -26px;
 	transform: translate(0%, -50%) scale(1.2);
 }
+
+/* .section-testimonials */
+
+.section-testimonials {
+	padding-top: 160px;
+	padding-bottom: 160px;
+}
+
+.section-testimonials .row {
+	margin-left: 112px;
+	margin-right: 112px;
+}
+
+@media only screen and (max-width: 991px) {
+	.section-testimonials .row {
+		margin-left: unset;
+		margin-right: unset;
+	}
+}
+
+.section-testimonials .intro {
+	max-width: 691px;
+	padding-bottom: 96px;
+}
+
+.section-testimonials-label {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 24px;
+	letter-spacing: 0.2px;
+	color: #FF6551;
+	margin-bottom: 10px;
+}
+
+.section-testimonials-header {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 40px;
+	line-height: 50px;
+	letter-spacing: 0.2px;
+	color: #252B42;
+	margin-bottom: 10px;
+}
+
+.section-testimonials-description {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: 0.2px;
+	color: #737373;
+}
+
+.testimonials-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 25px;
+}
+
+.testimonials-image {
+	margin-bottom: 30px;
+}
+
+.testimonials-image img {
+	width: 128px;
+	height: 128px;
+	border-radius: 100%;
+}
+
+.testimonials-description {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
+	text-align: center;
+	letter-spacing: 0.2px;
+	color: #737373;
+	max-width: 320px;
+	margin-bottom: 15px;
+	text-align: center;
+}
+
+.testimonials-rating {
+	display: flex;
+	justify-self: center;
+	margin-bottom: 15px;
+}
+
+.testimonials-rating .bi {
+	margin-right: 5px;
+	color: #F3CD03;
+}
+
+.testimonials-rating .bi:last-child {
+	margin-right: 0;
+}
+
+.testimonials-name {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 24px;
+	text-align: center;
+	letter-spacing: 0.1px;
+	color: #252B42;
+	margin-bottom: 5px;
+}
+
+.testimonials-occupation {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 24px;
+	text-align: center;
+	letter-spacing: 0.2px;
+	color: #737373;
+}
