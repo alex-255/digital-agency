@@ -2,6 +2,10 @@
 	background-color: #E74040;
 }
 
+.menu-bar .menu-bar-hamburger {
+	display: none;
+}
+
 .menu-bar .row {
 	min-height: 91px;
 	text-align: center;
@@ -45,7 +49,7 @@
 	align-items: center;
 }
 
-.login-area a.login-link-button {
+.login-area a.sign-up-button {
 	margin: 0 23px;
 	text-transform: uppercase;
 	padding: 15px 25px 15px 25px;
@@ -59,13 +63,100 @@
 	transition: padding-right 0.2s, box-shadow 0.2s;
 }
 
-.login-area a.login-link-button:hover {
+@media only screen and (max-width: 1000px) {
+	.menu-bar .row{
+		display: none;
+	}
+
+	.menu-bar.menu-opened .row{
+		display: flex;
+	}
+	
+	.menu-bar.menu-opened  {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		position: fixed;
+		z-index: 1;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		opacity: 0.9;
+	}
+
+	.menu-bar .menu-bar-hamburger {
+		display: flex;
+		position: relative;
+		top: 15px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 100px;
+		height: 100px;
+		position: relative;
+	}
+
+	.menu-bar .menu-bar-hamburger::after {
+		content: "\F479";
+		font-family: 'bootstrap-icons';
+		font-size: 50px;
+		color: #FFFFFF;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.menu-bar .menu-bar-hamburger.menu-opened {
+		display: flex;
+		top: 0;
+		width: 100px;
+		height: 100px;
+		margin-bottom: 20px;
+		position: relative;
+		transform: rotate(45deg);
+	}
+
+	.menu-bar .menu-bar-hamburger.menu-opened::after {
+		content: "\F64D";
+		font-family: 'bootstrap-icons';
+		font-size: 50px;
+		color: #FFFFFF;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.menu-opened .logo-area {
+		display: none;
+	}
+
+	.menu-area {
+		flex-direction: column;
+	}
+
+	.menu-area a, .login-area a {
+		margin: 10px;
+	}
+
+	.login-area {
+		flex-direction: column;
+	}
+
+	.login-area a.sign-up-button {
+		margin: 10px;
+	}
+}
+
+.login-area a.sign-up-button:hover {
 	padding-right: 20px;
 	box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.2);
 	border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.login-area a.login-link-button::after {
+.login-area a.sign-up-button::after {
 	content: "\F135";
 	font-family: bootstrap-icons;
 	font-size: 18px;
@@ -74,7 +165,7 @@
 	
 }
 
-.login-area a.login-link-button:hover::after {
+.login-area a.sign-up-button:hover::after {
 	margin-left: 15px;
 	transform: scale(1.2);
 }
@@ -1332,4 +1423,59 @@
 
 .team-card-icons .bi:last-child {
 	margin-right: 0;
+}
+
+/* .section-subscribe */
+
+.section-subscribe .container-xxl {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-top: 160px;
+	padding-bottom: 160px;
+}
+
+.section-subscribe .intro {
+	max-width: 691px;
+	padding-bottom: 80px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.section-subscribe-label {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 24px;
+	letter-spacing: 0.2px;
+	color: #FF6551;
+	margin-bottom: 10px;
+}
+
+.section-subscribe-header {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 32px;
+	letter-spacing: 0.1px;
+	color: #252B42;
+	margin-bottom: 10px;
+}
+
+.section-subscribe-description {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: 0.2px;
+	color: #737373;
 }
