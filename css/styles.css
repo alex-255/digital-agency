@@ -1444,7 +1444,7 @@
 
 .section-subscribe .intro {
 	max-width: 691px;
-	padding-bottom: 80px;
+	padding-bottom: 60px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -1484,4 +1484,39 @@
 	line-height: 20px;
 	letter-spacing: 0.2px;
 	color: #737373;
+}
+
+#subscribe-form {
+	max-width: 688px;
+	height: 58px;
+	display: flex;
+}
+
+#subscribe-form input[type=email] {
+	width: 100%;
+	display: inline-flex;
+	background: #F9F9F9;
+	border: 1px solid #E6E6E6;
+	border-radius: 5px;
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 28px;
+	letter-spacing: 0.2px;
+	color: #3d3d3d;
+	padding: 10px;
+}
+
+#subscribe-form input[type=email]:focus {
+	outline-color: #E6E6E6;
+	outline-width: 5px;
+}
+
+#subscribe-form input[type="submit"] {
+	background: #FF6551;
+	border: 1px solid #E6E6E6;
+	border-radius: 0px 5px 5px 0px;
+	color: #FFFFFF;
+	padding: 15px 22px;
 }
