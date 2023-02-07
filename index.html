@@ -435,14 +435,11 @@
 	<script>
 		window.addEventListener("load", (event) => {
 			var menuHamburger = document.getElementsByClassName("menu-bar-hamburger");
-		   console.log(menuHamburger[0].className);
 		   menuHamburger[0].onclick  = function(){
 				menuHamburger[0].classList.toggle("menu-opened");
-		   };
-		   var menuBar = document.getElementsByClassName("menu-bar");
-		   menuBar[0].onclick = function(){
+				var menuBar = document.getElementsByClassName("menu-bar");
 				menuBar[0].classList.toggle("menu-opened");
-		   }
+		   };
 		});
 		</script>
   </body>
