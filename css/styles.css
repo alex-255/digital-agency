@@ -1699,3 +1699,25 @@
 .footer-social .bi:last-child {
 	margin-right: 0;
 }
+
+/* .top-button */
+
+#top-button {
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+	width: 50px;
+	height: 50px;
+	background-color: #E74040;
+}
+
+#top-button::after {
+	content: "\F115";
+	font-family: 'bootstrap-icons';
+	font-size: 40px;
+	color: #FFFFFF;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
