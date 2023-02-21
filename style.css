@@ -1,0 +1,144 @@
+/*
+ Theme Name: Business Woods
+ Author: alex-255, Brothers design
+ Version: 1.0
+*/
+
+.menu-bar {
+	background-color: #1A1A1A;
+}
+
+.menu-bar .menu-bar-hamburger {
+	display: none;
+}
+
+.menu-bar .row {
+	min-height: 100px;
+	text-align: center;
+}
+
+.logo-area {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.logo-area img {
+    max-height: 40px;
+}
+
+.menu-area {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.menu-area a {
+	font-family: 'Libre Franklin', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    color: #6C6C6C;
+	text-align: center;
+	letter-spacing: 0.2px;
+	margin-right: 21px;
+	text-decoration: none;
+	display: inline-block;
+	border-bottom: 2px dotted transparent;
+	transition: border-bottom 0.3s;
+}
+
+.menu-area a:hover {
+	border-bottom: 2px dotted #6C6C6C;
+}
+
+
+
+@media only screen and (max-width: 1000px) {
+	.menu-bar .row{
+		display: none;
+	}
+
+	.menu-bar.menu-opened .row{
+		display: flex;
+	}
+	
+	.menu-bar.menu-opened  {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		position: fixed;
+		z-index: 1;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		opacity: 0.9;
+	}
+
+	.menu-bar .menu-bar-hamburger {
+		display: flex;
+		position: relative;
+		top: 15px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 100px;
+		height: 100px;
+		position: relative;
+	}
+
+	.menu-bar .menu-bar-hamburger::after {
+		content: "\F479";
+		font-family: 'bootstrap-icons';
+		font-size: 50px;
+		color: #FFFFFF;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.menu-bar .menu-bar-hamburger.menu-opened {
+		display: flex;
+		top: 0;
+		width: 100px;
+		height: 100px;
+		margin-bottom: 20px;
+		position: relative;
+		transform: rotate(45deg);
+	}
+
+	.menu-bar .menu-bar-hamburger.menu-opened::after {
+		content: "\F64D";
+		font-family: 'bootstrap-icons';
+		font-size: 50px;
+		color: #FFFFFF;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.menu-opened .logo-area {
+		display: none;
+	}
+
+	.menu-area {
+		flex-direction: column;
+	}
+
+	.menu-area a, .login-area a {
+		margin: 10px;
+	}
+
+	.login-area {
+		flex-direction: column;
+	}
+
+	.login-area a.sign-up-button {
+		margin: 10px;
+	}
+}
