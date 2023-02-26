@@ -33,6 +33,13 @@
 	align-items: center;
 }
 
+.menu-area ul {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	margin: 0;
+}
+
 a {
 	font-family: 'Libre Franklin', sans-serif;
     font-style: normal;
@@ -229,6 +236,24 @@ a:hover {
 	margin: 0 auto;
 	width: calc(100% - 100px);
 	border-bottom: 2px solid rgba(127, 127, 127, 0.4);
+}
+
+.main-index-post .paginate-links {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.main-index-post .paginate-links span, .main-index-post .paginate-links a {
+	margin-right: 10px;
+}
+
+.main-index-post .paginate-links span {
+	font-weight: bold;
+}
+
+.main-index-post .paginate-links a {
+	font-weight: normal;
 }
 
 .main-index-post--image {

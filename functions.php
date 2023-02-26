@@ -67,3 +67,15 @@ function wb_carousel() {
   );
 }
 add_action('init', 'wb_carousel');
+
+// Menus
+if ( ! function_exists( 'wb_register_nav_menu' ) ) {
+
+	function wb_register_nav_menu(){
+		register_nav_menus( array(
+	    	'primary_menu' => __( 'Primary Menu', 'textdomain' ),
+	    	'footer_menu'  => __( 'Footer Menu', 'textdomain' ),
+		) );
+	}
+	add_action( 'after_setup_theme', 'wb_register_nav_menu', 0 );
+}

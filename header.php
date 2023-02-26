@@ -14,10 +14,9 @@
                     <img src="<?php echo get_theme_mod( 'wb_site_logo' ); ?>">
                 </div>
                 <div class="col-12 col-lg-9 menu-area">
-                <a href="#" class="menu-area-link">Home</a>
-                <a href="#section-team" class="menu-area-link">Product</a>
-                <a href="#section-sales" class="menu-area-link">Pricing</a>
-                <a href="#section-subscribe" class="menu-area-link">Contact</a>
+                  <?php wp_nav_menu( array(
+                    'theme_location' => 'primary_menu'
+                  ) ); ?>
                 </div>
             </div>
         </div>
