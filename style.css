@@ -142,3 +142,27 @@
 		margin: 10px;
 	}
 }
+
+/* Hero */
+.carousel-item--image {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 400px;
+	min-height: 400px;
+}
+
+.carousel-caption {
+	text-shadow: 0px 0px 5px rgba(0,0,0, 0.7);
+}
+
+.carousel-indicators button[type=button] {
+	height: 4px;
+	border: 1px solid rgba(0,0,0, 0.4);
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.carousel-indicators button[type=button].active {
+	border: 1px solid transparent;
+}
