@@ -33,28 +33,29 @@
 	align-items: center;
 }
 
-.menu-area a {
+a {
 	font-family: 'Libre Franklin', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
-    text-transform: uppercase;
-    color: #6C6C6C;
-	text-align: center;
+    color: #ededed;
 	letter-spacing: 0.2px;
-	margin-right: 21px;
 	text-decoration: none;
 	display: inline-block;
 	border-bottom: 2px dotted transparent;
 	transition: border-bottom 0.3s;
 }
 
-.menu-area a:hover {
-	border-bottom: 2px dotted #6C6C6C;
+a:hover {
+	border-bottom: 2px dotted #ededed;
 }
 
-
+.menu-area a {
+	text-transform: uppercase;
+	text-align: center;
+	margin-right: 21px;
+}
 
 @media only screen and (max-width: 1000px) {
 	.menu-bar .row{
@@ -165,4 +166,87 @@
 
 .carousel-indicators button[type=button].active {
 	border: 1px solid transparent;
+}
+
+/* main-post */
+
+.main-post {
+	background-color: #1A1A1A;
+	color: #ededed;
+}
+
+.main-post a {
+	font-weight: bold;
+}
+
+.main-post .row hr {
+	margin: 0 auto;
+	width: calc(100% - 80px);
+	border-bottom: 2px solid rgba(127, 127, 127, 0.4);
+}
+
+.main-post--image {
+	padding: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.main-post--image img {
+	width: 100%;
+	height: auto;
+}
+
+.main-post--content {
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+/* main-index-post index.php */
+
+.main-index-post {
+	background-color: #1A1A1A;
+	color: #ededed;
+}
+
+.main-index-post a {
+	font-weight: bold;
+}
+
+.main-index-post .row:nth-child(2n) {
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+.main-index-post .row:nth-child(2n) .main-index-post--content p {
+	text-align: right;
+}
+
+.main-index-post .row hr {
+	margin: 0 auto;
+	width: calc(100% - 100px);
+	border-bottom: 2px solid rgba(127, 127, 127, 0.4);
+}
+
+.main-index-post--image {
+	padding: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.main-index-post--image img {
+	width: 100%;
+	height: auto;
+}
+
+.main-index-post--content {
+	padding: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
