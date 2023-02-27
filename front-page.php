@@ -52,7 +52,7 @@ get_header();
                                         <div class="carousel-item--image d-block w-100" style="background-image: url(<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large'); ?>);"></div>
                                         <div class="carousel-caption d-none d-md-block">
                                         <h5><?php the_title(); ?></h5>
-                                        <?php echo wp_trim_words(get_the_content(), 20); ?>
+                                        <p><?php echo wp_trim_words(get_the_content(), 20); ?></p>
                                         </div>
                                     </div>
                                 <?php
