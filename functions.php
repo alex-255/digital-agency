@@ -82,3 +82,22 @@ if ( ! function_exists( 'wb_register_nav_menu' ) ) {
 	}
 	add_action( 'after_setup_theme', 'wb_register_nav_menu', 0 );
 }
+
+// Sidebar(s)
+add_action( 'widgets_init', 'wb_register_sidebars' );
+
+function wb_register_sidebars() {
+	/* Register the 'primary' sidebar. */
+	register_sidebar(
+		array(
+			'id'            => 'primary',
+			'name'          => __( 'Primary Sidebar' ),
+			'description'   => __( 'The sidebar can appear on the left or on the right side when appropriate template is choosen.' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		)
+	);
+	/* Repeat register_sidebar() code for additional sidebars. */
+}

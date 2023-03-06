@@ -472,3 +472,37 @@ a:hover, .nav-link:hover {
 	align-items: center;
 	text-align: justify;
 }
+
+/* template-left-column */
+.template-left-column .main-page-post--image {
+    padding: 0 10px 10px 0;
+}
+
+.template-left-column .main-page-post--content {
+    padding: 0 10px 10px 0;
+}
+
+@media only screen and (max-width: 1199px) {
+	.template-left-column .main-page-post--image {
+		padding: 10px;
+	}
+	
+	.template-left-column .main-page-post--content {
+		padding: 10px;
+	}
+}
+
+/* Widgets */
+/* Calendar */
+.wp-block-calendar table caption, .wp-block-calendar table tbody {
+    color: #ededed;
+	text-align: center;
+}
+
+.wp-block-calendar table {
+	caption-side: top;
+}
+
+.wp-block-calendar table thead {
+	color: #1A1A1A;
+}
