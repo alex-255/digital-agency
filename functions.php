@@ -4,7 +4,9 @@ function wb_business_files() {
   wp_enqueue_style('custom-google-fonts', '//fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500&display=swap');
   wp_enqueue_style('bootstrap-style', '//cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css');
   wp_enqueue_script('bootstrap-script', '//cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js', NULL, '5.3.0', true);
+  wp_enqueue_style('bootstrap-icons', '//cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css');
   wp_enqueue_style('main-style', get_stylesheet_uri());
+  wp_enqueue_script('main-script', get_template_directory_uri() . '/assets/js/main.js', NULL, '1.0', true);
 }
 
 // Wooden Business Customizer
@@ -48,6 +50,7 @@ add_action( 'customize_register', 'wb_customize_register' );
 
 function wb_features() {
   add_theme_support('post-thumbnails');
+  add_theme_support('title-tag');
 }
 
 add_action('after_setup_theme', 'wb_features');

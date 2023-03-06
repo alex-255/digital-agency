@@ -15,6 +15,7 @@
                 </div>
                 <div class="col-12 col-lg-9 menu-area">
                   <?php wp_nav_menu( array(
+                    'menu' => 'primary_menu',
                     'theme_location' => 'primary_menu'
                   ) ); ?>
                 </div>
@@ -22,3 +23,4 @@
         </div>
 
     </header>
+

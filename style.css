@@ -51,7 +51,7 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0;
 }
 
-a {
+a, .nav-link {
 	font-family: 'Libre Franklin', sans-serif;
     font-style: normal;
     font-weight: 500;
@@ -65,7 +65,8 @@ a {
 	transition: border-bottom 0.3s;
 }
 
-a:hover {
+a:hover, .nav-link:hover {
+	color: #ededed;
 	border-bottom: 2px dotted #ededed;
 }
 
@@ -145,12 +146,17 @@ a:hover {
 		display: none;
 	}
 
-	.menu-area {
+	.menu-area .menu {
 		flex-direction: column;
 	}
 
+	.menu-area ul {
+		padding-left: 0;
+		list-style-type: none;
+	}
+
 	.menu-area a, .login-area a {
-		margin: 10px;
+		margin: 15px;
 	}
 
 	.login-area {
