@@ -15,6 +15,10 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 500;
 }
 
+.page-title {
+	text-align: center;
+}
+
 .menu-bar {
 	background-color: #1A1A1A;
 }
@@ -158,11 +162,18 @@ a:hover, .nav-link:hover {
 		display: none;
 	}
 
+	.menu-area {
+		flex-direction: column;
+		justify-content: center;
+	}
+
 	.menu-area .menu {
 		flex-direction: column;
 	}
 
-	
+	#searchform, .bi-search {
+		margin: 15px;
+	}
 
 	.menu-area a, .login-area a {
 		margin: 15px;
@@ -175,6 +186,7 @@ a:hover, .nav-link:hover {
 	.login-area a.sign-up-button {
 		margin: 10px;
 	}
+
 }
 
 /* Hero */
