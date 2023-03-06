@@ -492,6 +492,25 @@ a:hover, .nav-link:hover {
 	}
 }
 
+/* template-right-column */
+.template-right-column .main-page-post--image {
+    padding: 0 0 10px 10px;
+}
+
+.template-right-column .main-page-post--content {
+    padding: 0 0 10px 10px;
+}
+
+@media only screen and (max-width: 1199px) {
+	.template-right-column .main-page-post--image {
+		padding: 10px;
+	}
+	
+	.template-right-column .main-page-post--content {
+		padding: 10px;
+	}
+}
+
 /* Widgets */
 /* Calendar */
 .wp-block-calendar table caption, .wp-block-calendar table tbody {
