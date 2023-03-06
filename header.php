@@ -18,9 +18,10 @@
                     'menu' => 'primary_menu',
                     'theme_location' => 'primary_menu'
                   ) ); ?>
+                  <?php get_search_form(); ?><i class="bi bi-search"></i>
                 </div>
             </div>
         </div>
-
+        
     </header>
 

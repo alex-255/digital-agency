@@ -97,7 +97,7 @@ get_header();
                     </div>
                     <div class="col-12 col-lg-5 main-post--content">
                         <h2><?php the_title(); ?></h2>
-                        <p><?php echo wp_trim_words(get_the_content(), 50); ?> <a href="<?php the_permalink(); ?>">Read more &raquo;</a></p>
+                        <p><?php echo wp_trim_words(get_the_content(), 50); ?> <a href="<?php the_permalink(); ?>" class="read-more-link">Read more &raquo;</a></p>
                     </div>
                     <hr>
                 </div>

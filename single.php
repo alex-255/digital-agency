@@ -13,6 +13,7 @@ get_header();
                     <div class="col-12 main-single-post--content">
                         <h2><?php the_title(); ?></h2>
                         <?php the_content(); ?>
+                        <?php edit_post_link(); ?>
                     </div>
                     <hr>
                 </div>

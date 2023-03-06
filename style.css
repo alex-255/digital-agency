@@ -55,8 +55,7 @@ a, .nav-link {
 	font-family: 'Libre Franklin', sans-serif;
     font-style: normal;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 16px;
     color: #ededed;
 	letter-spacing: 0.2px;
 	text-decoration: none;
@@ -76,6 +75,19 @@ a:hover, .nav-link:hover {
 	margin-right: 21px;
 }
 
+.menu-area ul {
+	padding-left: 0;
+	list-style-type: none;
+}
+
+#searchform {
+	display: none;
+}
+
+.bi-search {
+	color: #ededed;
+}
+
 @media only screen and (max-width: 1000px) {
 	.menu-bar .row{
 		display: none;
@@ -91,12 +103,12 @@ a:hover, .nav-link:hover {
 		justify-content: center;
 		align-items: center;
 		position: fixed;
-		z-index: 1;
+		z-index: 10;
 		top: 0;
 		right: 0;
 		bottom: 0;
 		left: 0;
-		opacity: 0.9;
+		opacity: 0.98;
 	}
 
 	.menu-bar .menu-bar-hamburger {
@@ -150,10 +162,7 @@ a:hover, .nav-link:hover {
 		flex-direction: column;
 	}
 
-	.menu-area ul {
-		padding-left: 0;
-		list-style-type: none;
-	}
+	
 
 	.menu-area a, .login-area a {
 		margin: 15px;
@@ -200,7 +209,7 @@ a:hover, .nav-link:hover {
 	border: 1px solid transparent;
 }
 
-/* main-post */
+/* main-post - Front-page */
 
 .main-post {
 	background-color: #1A1A1A;
@@ -236,6 +245,19 @@ a:hover, .nav-link:hover {
 	justify-content: center;
 	align-items: flex-start;
 }
+
+.read-more-link {
+	font-weight: 500;
+}
+
+@media only screen and (max-width: 1000px) {
+	.main-post--content {
+		padding: 30px;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
 
 /* main-index-post index.php */
 
@@ -305,6 +327,26 @@ a:hover, .nav-link:hover {
 	flex-direction: column;
 	justify-content: center;
 	align-items: flex-start;
+}
+
+@media only screen and (max-width: 1000px) {
+	.main-index-post .row:nth-child(2n) .main-index-post--content {
+		padding: 50px;
+		align-items: center;
+	}
+
+	.main-index-post .row:nth-child(2n) .main-index-post--content p {
+		text-align: justify;
+	}
+
+	.main-index-post .row:nth-child(2n) .main-index-post--content h2 {
+		text-align: center;
+	}
+
+	.main-index-post--content {
+		padding: 50px;
+		align-items: center;
+	}
 }
 
 /* main-single-post single.php */
