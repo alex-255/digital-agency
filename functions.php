@@ -45,6 +45,29 @@ function wb_customize_register( $wp_customize ) {
                   )
   )) );
 
+  // Sidebar position
+  $wp_customize->add_setting( 'wb_sidebar_position', array(
+    'type' => 'theme_mod', // or 'option'
+    'capability' => 'edit_theme_options',
+    'default' => 'left',
+    'transport' => 'refresh', // or postMessage
+    'sanitize_callback' => 'sanitize_text_field'
+    ) 
+  );
+
+  $wp_customize->add_control( 'wb_sidebar_position', array(
+    'type' => 'radio',
+    'priority' => 25,
+    'section' => 'wb_theme_options', 
+    'label' => __( 'Sidebar position' ),
+    'description' => __( 'Choose a sidebar position.' ),
+    'choices' => array(
+      'left' => __( 'Left' ),
+      'right' => __( 'Right' )
+      ),
+    ) 
+  );
+
   // Phone number in footer
   $wp_customize->add_setting( 'wb_phone_in_footer', array(
     'type' => 'theme_mod', // or 'option'
@@ -116,6 +139,8 @@ function wb_customize_register( $wp_customize ) {
     )
     ) 
   );
+
+  
 
 }
 add_action( 'customize_register', 'wb_customize_register' );

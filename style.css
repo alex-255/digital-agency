@@ -297,6 +297,10 @@ a:hover, .nav-link:hover {
 	text-align: right;
 }
 
+.main-index-main-row {
+	display: flex;
+}
+
 .main-index-post .row hr {
 	margin: 0 auto;
 	width: calc(100% - 100px);
