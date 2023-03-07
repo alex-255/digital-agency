@@ -22,14 +22,14 @@ function wb_customize_register( $wp_customize ) {
       'theme_supports' => '', // Rarely needed.
     ) );
 
-
+    // Site logo
     $wp_customize->add_setting( 'wb_site_logo', array(
       'type' => 'theme_mod', // or 'option'
       'capability' => 'edit_theme_options',
       'theme_supports' => '', // Rarely needed.
       'default' => get_theme_file_uri('/images/site-logo.png'),
       'transport' => 'refresh', // or postMessage
-      'sanitize_callback' => 'esc_url_raw',
+      'sanitize_callback' => 'sanitize_url',
       'sanitize_js_callback' => '', // Basically to_json.
     ) );
 
@@ -44,6 +44,78 @@ function wb_customize_register( $wp_customize ) {
                   'change' => 'Change Site Logo',
                   )
   )) );
+
+  // Phone number in footer
+  $wp_customize->add_setting( 'wb_phone_in_footer', array(
+    'type' => 'theme_mod', // or 'option'
+    'capability' => 'edit_theme_options',
+    'theme_supports' => '', // Rarely needed.
+    'default' => '',
+    'transport' => 'refresh', // or postMessage
+    'sanitize_callback' => 'sanitize_text_field',
+    'sanitize_js_callback' => '', // Basically to_json.
+    ) 
+  );
+
+  $wp_customize->add_control( 'wb_phone_in_footer', array(
+    'type' => 'text',
+    'priority' => 30, // Within the section.
+    'section' => 'wb_theme_options', // Required, core or custom.
+    'label' => __( 'Phone number in footer', 'textdomain' ),
+    'description' => __( 'Enter Phone number for showing in footer.' ),
+    'input_attrs' => array(
+      'placeholder' => __( '000000000' ),
+    )
+    ) 
+  );
+
+  // Email in footer
+  $wp_customize->add_setting( 'wb_email_in_footer', array(
+    'type' => 'theme_mod', // or 'option'
+    'capability' => 'edit_theme_options',
+    'theme_supports' => '', // Rarely needed.
+    'default' => '',
+    'transport' => 'refresh', // or postMessage
+    'sanitize_callback' => 'sanitize_email',
+    'sanitize_js_callback' => '', // Basically to_json.
+    ) 
+  );
+
+  $wp_customize->add_control( 'wb_email_in_footer', array(
+    'type' => 'email',
+    'priority' => 40, // Within the section.
+    'section' => 'wb_theme_options', // Required, core or custom.
+    'label' => __( 'Email in footer', 'textdomain' ),
+    'description' => __( 'Enter Email for showing in footer.' ),
+    'input_attrs' => array(
+      'placeholder' => __( 'Your Email here...' ),
+    )
+    ) 
+  );
+
+  // Phone number in footer
+  $wp_customize->add_setting( 'wb_address_in_footer', array(
+    'type' => 'theme_mod', // or 'option'
+    'capability' => 'edit_theme_options',
+    'theme_supports' => '', // Rarely needed.
+    'default' => '',
+    'transport' => 'refresh', // or postMessage
+    'sanitize_callback' => 'sanitize_text_field',
+    'sanitize_js_callback' => '', // Basically to_json.
+    ) 
+  );
+
+  $wp_customize->add_control( 'wb_address_in_footer', array(
+    'type' => 'text',
+    'priority' => 50, // Within the section.
+    'section' => 'wb_theme_options', // Required, core or custom.
+    'label' => __( 'Address in footer', 'textdomain' ),
+    'description' => __( 'Enter Address for showing in footer.' ),
+    'input_attrs' => array(
+      'placeholder' => __( 'Your address here...' ),
+    )
+    ) 
+  );
 
 }
 add_action( 'customize_register', 'wb_customize_register' );
@@ -77,7 +149,9 @@ if ( ! function_exists( 'wb_register_nav_menu' ) ) {
 	function wb_register_nav_menu(){
 		register_nav_menus( array(
 	    	'primary_menu' => __( 'Primary Menu', 'textdomain' ),
-	    	'footer_menu'  => __( 'Footer Menu', 'textdomain' ),
+	    	'footer_menu_1'  => __( 'Footer Menu One', 'textdomain' ),
+        'footer_menu_2'  => __( 'Footer Menu Two', 'textdomain' ),
+        'footer_social_icons'  => __( 'Footer Social Icons', 'textdomain' )
 		) );
 	}
 	add_action( 'after_setup_theme', 'wb_register_nav_menu', 0 );

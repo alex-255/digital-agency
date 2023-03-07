@@ -65,7 +65,7 @@ a, .nav-link {
 	text-decoration: none;
 	display: inline-block;
 	border-bottom: 2px dotted transparent;
-	transition: border-bottom 0.3s;
+	transition: all 0.3s;
 }
 
 a:hover, .nav-link:hover {
@@ -524,4 +524,141 @@ a:hover, .nav-link:hover {
 
 .wp-block-calendar table thead {
 	color: #1A1A1A;
+}
+
+/* Footer */
+.footer {
+	color: #ededed;
+	background-color: #1A1A1A;
+	min-height: 90px;
+	/* 12px - bootstrap's padding. 50px - regular for this Wordpress Theme. */
+	padding: calc(50px - 12px);
+}
+
+.footer-logo-area {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.footer-logo-area img {
+    max-height: 40px;
+}
+
+.footer .social-icons {
+	margin-top: 90px;
+}
+
+.footer .social-icons ul {
+	padding: 0;
+	display: flex;
+	flex-direction: row;
+}
+
+.footer .social-icons li {
+	list-style: none;
+	margin-right: 16px;
+}
+
+.footer .social-icons li:last-child {
+	margin-right: 0;
+}
+
+.footer .social-icons li:hover .bi::before {
+	color: #6C6C6C
+}
+
+.footer .social-icons li:hover a {
+	background-color: #141313;
+	border: none;
+}
+
+.footer .social-icons a {
+	display: flex;
+	background-color: #ededed;
+	text-decoration: none;
+	width: 36px;
+	height: 36px;
+	justify-content: center;
+	align-items: center;
+	border-radius: 100%;
+	border: none;
+}
+
+.footer .social-icons .bi::before {
+	font-size: 18px;
+	color: #1A1A1A;
+	vertical-align: middle;
+}
+
+/* footer menus */
+.footer .footer-menu ul {
+	padding: 0;
+	margin: 0;
+}
+
+.footer .footer-menu li {
+	list-style-type: none;
+
+}
+
+.footer .footer-menu li a {
+	color: #6C6C6C;
+	margin: 3px;
+}
+
+.footer .footer-menu li a:hover {
+	color: #ededed;
+	border-bottom: 2px dotted #ededed;
+}
+
+/* footer info */
+.footer-info {
+	display: flex;
+	flex-direction: column;
+	max-width: 150px;
+	margin: 0 auto;
+}
+
+.footer-info h4 {
+	font-family: 'Libre Franklin';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 17px;
+	text-transform: uppercase;
+	color: #6C6C6C;
+}
+
+.footer-info p, .footer-info p a {
+	font-family: 'Libre Franklin';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 17px;
+	color: #FFFFFF;
+}
+
+@media only screen and (max-width: 1199px) {
+	.footer-logo-area, .footer-menu, .footer-info {
+		align-items: center;
+	}
+
+	.footer .social-icons {
+		margin-top: 50px;
+	}
+
+	.footer .footer-menu ul {
+		margin: 20px;
+	}
+
+	.footer-menu ul li {
+		text-align: center;
+		margin: 10px;
+	}
+
+	.footer-info {
+		margin: 20px auto;
+	}
 }

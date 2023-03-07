@@ -2,9 +2,9 @@
 get_header(); 
 ?>
 <!-- Hero images carousel -->
-<div class="container-xxl px-0">
+<div class="container-xxl">
     <div class="row">
-        <div class="col-12">
+        <div class="col-12 px-0">
             <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <?php
