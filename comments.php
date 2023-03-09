@@ -8,3 +8,4 @@
 	?>
 </ol>
 <?php comment_form(); ?>
+<?php paginate_comments_links(); ?>
