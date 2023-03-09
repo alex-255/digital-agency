@@ -14,6 +14,7 @@ get_header();
                         <h2><?php the_title(); ?></h2>
                         <?php the_content(); ?>
                         <?php edit_post_link(); ?>
+                        
                     </div>
                     <hr>
                 </div>
@@ -23,6 +24,18 @@ get_header();
             _e( 'Sorry, no posts matched your criteria.', 'textdomain' );
         endif;
     ?>
+    <div class="row">
+        <div class="col-12">
+            <div class="comments">
+            <?php 
+                // If comments are open or we have at least one comment, load up the comment template.
+                if ( comments_open() || get_comments_number() ) :
+                    comments_template();
+                endif;
+            ?>
+            </div>
+        </div>
+    </div>
 </div>
 
 <?php

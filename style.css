@@ -62,19 +62,20 @@ h1, h2, h3, h4, h5, h6 {
 a, .nav-link {
 	font-family: 'Libre Franklin', sans-serif;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 16px;
+	line-height: normal;
     color: #ededed;
 	letter-spacing: 0.2px;
 	text-decoration: none;
 	display: inline-block;
-	border-bottom: 2px dotted transparent;
+	border-bottom: 2px dotted rgba(255, 255, 255, 0.6);
 	transition: all 0.3s;
 }
 
 a:hover, .nav-link:hover {
 	color: #ededed;
-	border-bottom: 2px dotted #ededed;
+	border-bottom: 2px solid #ededed;
 }
 
 .menu-area a {
@@ -377,7 +378,7 @@ a:hover, .nav-link:hover {
 }
 
 .main-single-post a {
-	font-weight: 500;
+	font-weight: 400;
 }
 
 .main-single-post .row hr {
@@ -669,4 +670,30 @@ a:hover, .nav-link:hover {
 	.footer-info {
 		margin: 20px auto;
 	}
+}
+
+.comments {
+	padding: 40px;
+}
+
+.comments .vcard {
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+
+.comments .vcard img {
+	margin: 5px;
+}
+
+.comment-meta {
+	margin-bottom: 4px;
+}
+
+.comment-form-comment {
+	display: flex;
+	flex-direction: column;
+}
+
+.comment-form-comment textarea {
+	width: fit-content;
 }
