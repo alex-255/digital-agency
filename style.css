@@ -100,7 +100,6 @@ a:hover, .nav-link:hover {
 
 .search-form[aria-label=visible] {
 	display: block;
-	text-align: center;
 }
 
 .bi-search {
@@ -338,6 +337,10 @@ a:hover, .nav-link:hover {
 
 .main-index-post .paginate-links a {
 	font-weight: normal;
+}
+
+.main-index-post .search-form[aria-label=visible] {
+	text-align: center;
 }
 
 .main-index-post--image {
