@@ -94,8 +94,13 @@ a:hover, .nav-link:hover {
 	list-style-type: none;
 }
 
-#searchform {
+.search-form {
 	display: none;
+}
+
+.search-form[aria-label=visible] {
+	display: block;
+	text-align: center;
 }
 
 .bi-search {
@@ -411,7 +416,7 @@ a:hover, .nav-link:hover {
 }
 
 .main-single-post--image {
-	padding: 50px;
+	padding: 0 50px 50px 50px;
 	display: flex;
 	justify-content: center;
 	align-items: center;

@@ -8,7 +8,8 @@ get_header();
         <h1 class="page-title">
             <?php printf( __( 'Search Results for: %s', 'textdomain' ), get_search_query() ); ?>
         </h1>
-        <p><?php get_search_form(); ?></p>
+        <p class="text-center">Need another search? </p>
+        <?php get_search_form( array('aria_label' => 'visible') ); ?>
         </div>
     </div>
     <?php

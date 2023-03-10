@@ -148,6 +148,7 @@ add_action( 'customize_register', 'wb_customize_register' );
 function wb_features() {
   add_theme_support('post-thumbnails');
   add_theme_support('title-tag');
+  add_theme_support( 'html5', array( 'search-form' ) );
 }
 
 add_action('after_setup_theme', 'wb_features');

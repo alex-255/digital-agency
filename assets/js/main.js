@@ -8,9 +8,9 @@ window.addEventListener("load", () => {
     };
 
     let searchIcon = document.getElementsByClassName("bi-search");
-    let searchForm = document.getElementById("searchform");
+    let searchForm = document.getElementsByClassName("search-form");
     searchIcon[0].onclick = function() {
-        searchForm.style.display = "block";
+        searchForm[0].style.display = "block";
         searchIcon[0].style.display = "none";
     };
 });
