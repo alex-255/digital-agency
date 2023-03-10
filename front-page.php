@@ -76,6 +76,7 @@ get_header();
     </div>
 </div>
 <div class="container-xxl main-post">
+
     <?php
     // Arguments
     $args = array(
@@ -96,7 +97,7 @@ get_header();
                         <img  src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large'); ?>" />
                     </div>
                     <div class="col-12 col-lg-5 main-post--content">
-                        <h2><?php the_title(); ?></h2>
+                        <h2><?php the_title(); ?><?php echo (is_sticky(get_the_ID())) ? ' <i class="bi bi-star-fill"><span class="tooltiptext">Sticky post</span></i>' : "" ; ?></h2>
                         <p><?php echo wp_trim_words(get_the_content(), 50); ?> <a href="<?php the_permalink(); ?>" class="read-more-link">Read more &raquo;</a></p>
                     </div>
                     <hr>

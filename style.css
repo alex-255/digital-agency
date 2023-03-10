@@ -4,6 +4,7 @@
  Version: 1.0
 */
 
+/*** General ***/
 body {
 	font-family: 'Libre Franklin', sans-serif;
     font-style: normal;
@@ -14,6 +15,33 @@ body {
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 500;
 }
+
+/* Tooltip */
+
+.bi-star-fill {
+	position: relative;
+  }
+
+.tooltiptext {
+	visibility: hidden;
+	width: 120px;
+	background-color: rgb(230, 230, 230);
+	color: #000000;
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px 0;
+
+	position: absolute;
+	z-index: 1;
+	left: calc(100% + 5px);
+	top: calc(-100% - 5px);
+  }
+  
+  .bi-star-fill:hover .tooltiptext {
+	visibility: visible;
+  }
+
+/* Navbar */
 
 .page-title {
 	text-align: center;
@@ -240,6 +268,12 @@ a:hover, .nav-link:hover {
 .main-post {
 	background-color: #1A1A1A;
 	color: #ededed;
+}
+
+.main-post .bi-star-fill {
+	font-size: 50%;
+	color: yellow;
+	vertical-align: top;
 }
 
 .main-post a {
