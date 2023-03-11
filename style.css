@@ -41,6 +41,114 @@ h1, h2, h3, h4, h5, h6 {
 	visibility: visible;
   }
 
+/* Form and comment form */
+input[type=text], textarea {
+	background: rgba(196, 196, 196, 0.3);
+	border-radius: 30px;
+	border: none;
+	padding: 5px 15px;
+	outline: none;
+	color: #FFFFFF;
+}
+
+input[type=text] {
+	/* 80px is min-width of label */
+	width: calc(60% - 80px);
+}
+
+.comments {
+	padding: 40px;
+}
+
+.comments .vcard {
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+
+.comments .vcard img {
+	margin: 5px;
+}
+
+.comment-meta {
+	margin-bottom: 4px;
+}
+
+.comment-form-comment {
+	display: flex;
+	flex-direction: column;
+}
+
+.comment-form-comment label {
+	margin-bottom: 5px;
+}
+
+.comment-form-comment textarea {
+	height: 164px;
+	width: 60%;
+	padding: 15px;
+}
+
+input[type=submit] {
+	background: #BD6900;
+	border-radius: 30px;
+	font-family: 'Libre Franklin';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 29px;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	padding: 10px 20px;
+}
+
+input[type=checkbox] {
+	width: 17px;
+    height: 17px;
+	vertical-align: middle;
+}
+
+input[type=checkbox]:checked {
+	background: rgba(196, 196, 196, 0.3);
+}
+
+form.comment-form label {
+	min-width: 80px;
+}
+
+@media only screen and (max-width: 1000px) {
+	.comment-form-comment textarea {
+		width: 100%;
+	}
+
+	input[type=text] {
+		/* 80px is min-width of label */
+		width: calc(100% - 85px);
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.comment-form-author,
+	.comment-form-email,
+	.comment-form-url {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.comment-form-author input[type=text],
+	.comment-form-email input[type=text],
+	.comment-form-url input[type=text]
+	{
+		width: 100%;
+	}
+
+	.comment-form-author label,
+	.comment-form-email label,
+	.comment-form-url label
+	{
+		margin-bottom: 5px;
+	}
+}
+
 /*** Navbar ***/
 
 .page-title {
@@ -727,28 +835,5 @@ a:hover, .nav-link:hover {
 	}
 }
 
-.comments {
-	padding: 40px;
-}
 
-.comments .vcard {
-	margin-top: 10px;
-	margin-bottom: 5px;
-}
 
-.comments .vcard img {
-	margin: 5px;
-}
-
-.comment-meta {
-	margin-bottom: 4px;
-}
-
-.comment-form-comment {
-	display: flex;
-	flex-direction: column;
-}
-
-.comment-form-comment textarea {
-	width: fit-content;
-}

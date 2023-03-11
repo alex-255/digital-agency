@@ -28,7 +28,6 @@ get_header();
                                         <span><?php previous_post_link(); ?></span><span><?php next_post_link(); ?></span>
                                     </div>
                                 <?php } ?>
-                                
                             </div>
                             <hr>
                         </div>
