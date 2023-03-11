@@ -41,7 +41,7 @@ h1, h2, h3, h4, h5, h6 {
 	visibility: visible;
   }
 
-/* Navbar */
+/*** Navbar ***/
 
 .page-title {
 	text-align: center;
@@ -231,7 +231,7 @@ a:hover, .nav-link:hover {
 
 }
 
-/* Hero */
+/*** Hero ***/
 .carousel-item--image {
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -263,7 +263,7 @@ a:hover, .nav-link:hover {
 	border: 1px solid transparent;
 }
 
-/* main-post - Front-page */
+/*** main-post - Front-page ***/
 
 .main-post {
 	background-color: #1A1A1A;
@@ -319,7 +319,7 @@ a:hover, .nav-link:hover {
 }
 
 
-/* main-index-post index.php */
+/*** main-index-post index.php ***/
 
 .main-index-post {
 	background-color: #1A1A1A;
@@ -417,7 +417,7 @@ a:hover, .nav-link:hover {
 	}
 }
 
-/* main-single-post single.php */
+/*** main-single-post single.php ***/
 
 .main-single-post {
 	background-color: #1A1A1A;
@@ -473,7 +473,14 @@ a:hover, .nav-link:hover {
 	text-align: justify;
 }
 
-/* main-page-post page.php */
+.post-links {
+	display: flex;
+	justify-content: space-between;
+	margin: 10px auto;
+	width: 100%;
+}
+
+/*** main-page-post page.php ***/
 
 .main-page-post {
 	background-color: #1A1A1A;
@@ -529,7 +536,7 @@ a:hover, .nav-link:hover {
 	text-align: justify;
 }
 
-/* template-left-column */
+/*** template-left-column ***/
 .template-left-column .main-page-post--image {
     padding: 0 10px 10px 0;
 }
@@ -548,7 +555,7 @@ a:hover, .nav-link:hover {
 	}
 }
 
-/* template-right-column */
+/*** template-right-column ***/
 .template-right-column .main-page-post--image {
     padding: 0 0 10px 10px;
 }
@@ -567,7 +574,7 @@ a:hover, .nav-link:hover {
 	}
 }
 
-/* Widgets */
+/*** Widgets ***/
 /* Calendar */
 .wp-block-calendar table caption, .wp-block-calendar table tbody {
     color: #ededed;
@@ -582,7 +589,7 @@ a:hover, .nav-link:hover {
 	color: #1A1A1A;
 }
 
-/* Footer */
+/*** Footer ***/
 .footer {
 	color: #ededed;
 	background-color: #1A1A1A;
@@ -648,7 +655,7 @@ a:hover, .nav-link:hover {
 	vertical-align: middle;
 }
 
-/* footer menus */
+/*** footer menus ***/
 .footer .footer-menu ul {
 	padding: 0;
 	margin: 0;
@@ -670,7 +677,7 @@ a:hover, .nav-link:hover {
 	border-bottom: 2px dotted #ededed;
 }
 
-/* footer info */
+/*** footer info ***/
 .footer-info {
 	display: flex;
 	flex-direction: column;

@@ -21,6 +21,13 @@ get_header();
                                 <h2><?php the_title(); ?></h2>
                                 <?php the_content(); ?>
                                 <?php edit_post_link(); ?>
+                                <?php 
+                                // if "Hide previous and next post links" checkbox unchecked, then show this code.
+                                if ( get_theme_mod( 'wb_hide_prev_next_links' ) == false ) { ?>
+                                    <div class="post-links">
+                                        <span><?php previous_post_link(); ?></span><span><?php next_post_link(); ?></span>
+                                    </div>
+                                <?php } ?>
                                 
                             </div>
                             <hr>

@@ -116,7 +116,7 @@ function wb_customize_register( $wp_customize ) {
     ) 
   );
 
-  // Phone number in footer
+  // Address in footer
   $wp_customize->add_setting( 'wb_address_in_footer', array(
     'type' => 'theme_mod', // or 'option'
     'capability' => 'edit_theme_options',
@@ -140,7 +140,23 @@ function wb_customize_register( $wp_customize ) {
     ) 
   );
 
-  
+  // Hide previous and next post links
+  $wp_customize->add_setting( 'wb_hide_prev_next_links', array(
+    'type' => 'theme_mod', // or 'option'
+    'capability' => 'edit_theme_options',
+    'default' => '',
+    'transport' => 'refresh', // or postMessage
+    'sanitize_callback' => 'sanitize_text_field'
+    ) 
+  );
+
+  $wp_customize->add_control( 'wb_hide_prev_next_links', array(
+    'type' => 'checkbox',
+    'priority' => 60,
+    'section' => 'wb_theme_options', 
+    'label' => __( 'Hide previous and next post links' )
+    ) 
+  );
 
 }
 add_action( 'customize_register', 'wb_customize_register' );
