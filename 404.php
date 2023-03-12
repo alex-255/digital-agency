@@ -10,9 +10,9 @@ get_header();
             <?php } ?>
         </div>
         <div class="col-12 col-lg-9">
-            <h1><?php _e( 'Not Found', 'textdomain' ); ?></h1>
-            <h2><?php _e( 'This is somewhat embarrassing, isn’t it?', 'textdomain' ); ?></h2>
-            <p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'textdomain' ); ?></p>
+            <h1><?php esc_html_e( 'Not Found', 'wooden-business' ); ?></h1>
+            <h2><?php esc_html_e( 'This is somewhat embarrassing, isn’t it?', 'wooden-business' ); ?></h2>
+            <p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search?', 'wooden-business' ); ?></p>
 
             <?php get_search_form( array('aria_label' => 'visible') ); ?>
         </div>

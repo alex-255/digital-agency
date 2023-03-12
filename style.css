@@ -1,7 +1,8 @@
 /*
- Theme Name: Business Woods
+ Theme Name: Wooden Business
  Author: alex-255, Brothers design
  Version: 1.0
+ Text Domain: wooden-business
 */
 
 /*** General ***/
@@ -109,6 +110,7 @@ input[type=checkbox] {
 
 input[type=checkbox]:checked {
 	background: rgba(196, 196, 196, 0.3);
+	accent-color: rgba(196, 196, 196, 0.3);
 }
 
 form.comment-form label {

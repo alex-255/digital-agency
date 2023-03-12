@@ -25,7 +25,7 @@ get_header();
                 <?php 
                 endwhile;
             else :
-                _e( 'Sorry, no posts matched your criteria.', 'textdomain' );
+                esc_html_e( 'Sorry, no posts matched your criteria.', 'wooden-business' );
             endif;
             ?>
         </div>

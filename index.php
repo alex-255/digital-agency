@@ -33,7 +33,7 @@ get_header();
             <?php 
                 
             else :
-                _e( 'Sorry, no posts matched your criteria.', 'textdomain' );
+                esc_html_e( 'Sorry, no posts matched your criteria.', 'wooden-business' );
             endif;
             
             ?>
