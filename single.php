@@ -34,7 +34,7 @@ get_header();
                     <?php 
                     endwhile;
                 else :
-                    esc_html_e( 'Sorry, no posts matched your criteria.', 'wooden-business' );
+                    esc_html_e( 'Sorry, no posts matched your criteria.', 'digital-agency' );
                 endif;
             ?>
             <div class="comments">

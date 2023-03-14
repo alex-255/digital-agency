@@ -33,7 +33,7 @@ get_header();
             <?php 
                 
             else :
-                esc_html_e( 'Sorry, no posts matched your criteria.', 'wooden-business' );
+                esc_html_e( 'Sorry, no posts matched your criteria.', 'digital-agency' );
             endif;
             
             ?>

@@ -6,7 +6,7 @@ get_header();
     <div class="row">
         <div class="col-12">
         <h1 class="page-title">
-            <?php printf( __( 'Search Results for: %s', 'wooden-business' ), get_search_query() ); ?>
+            <?php printf( __( 'Search Results for: %s', 'digital-agency' ), get_search_query() ); ?>
         </h1>
         <p class="text-center">Need another search? </p>
         <?php get_search_form( array('aria_label' => 'visible') ); ?>
@@ -35,7 +35,7 @@ get_header();
         <?php 
             
         else :
-            esc_html_e( 'Sorry, no posts matched your criteria.', 'wooden-business' );
+            esc_html_e( 'Sorry, no posts matched your criteria.', 'digital-agency' );
         endif;
         
     ?>
