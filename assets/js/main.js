@@ -1,16 +1,33 @@
 window.addEventListener("load", () => {
-    var menuBar = document.getElementsByClassName("menu-bar");
-    // for mobile menu 
-    var menuHamburger = document.getElementsByClassName("menu-bar-hamburger");
-    menuHamburger[0].onclick  = function(){
-        menuHamburger[0].classList.toggle("menu-opened");
+    var menuBar = document.getElementsByClassName("navigation-bar");
+    const menuHamburger = document.querySelector(".navigation-bar-hamburger");
+    
+    
+    menuHamburger.onclick  = function(){
+        menuHamburger.classList.toggle("menu-opened");
         menuBar[0].classList.toggle("menu-opened");
+        // document.querySelector('.menu-opened .logo-area').style.display = "flex";       
+        // menuHamburgerOpened = document.querySelector(".navigation-bar-hamburger.menu-opened");
     };
 
-    let searchIcon = document.getElementsByClassName("bi-search");
-    let searchForm = document.getElementsByClassName("search-form");
-    searchIcon[0].onclick = function() {
-        searchForm[0].style.display = "block";
-        searchIcon[0].style.display = "none";
+    
+
+    
+    
+
+    let searchIcon = document.getElementById("bi-search");
+    let searchForm = document.querySelector('.search-form[aria-label="navigation-search"]');
+    let closeButton = document.getElementById("bi-plus-lg");
+    searchIcon.onclick = () => {
+        console.log(searchForm);
+        searchForm.style.display = "block";
+        searchIcon.style.display = "none";
+        closeButton.style.display = "block";
+    };
+
+    closeButton.onclick = () => {
+        searchForm.style.display = "none";
+        searchIcon.style.display = "block";
+        closeButton.style.display = "none";
     };
 });

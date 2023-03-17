@@ -1,7 +1,7 @@
 <?php
 
 function wb_business_files() {
-  wp_enqueue_style('custom-google-fonts', '//fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600&display=swap');
+  wp_enqueue_style('custom-google-fonts', '//fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600display=swap');
   wp_enqueue_style('bootstrap-style', '//cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css');
   wp_enqueue_script('bootstrap-script', '//cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js', NULL, '5.3.0', true);
   wp_enqueue_style('bootstrap-icons', '//cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css');
@@ -27,7 +27,7 @@ function wb_customize_register( $wp_customize ) {
       'type' => 'theme_mod', // or 'option'
       'capability' => 'edit_theme_options',
       'theme_supports' => '', // Rarely needed.
-      'default' => get_theme_file_uri('/images/site-logo.png'),
+      'default' => false,
       'transport' => 'refresh', // or postMessage
       'sanitize_callback' => 'sanitize_url',
       'sanitize_js_callback' => '', // Basically to_json.
