@@ -164,10 +164,28 @@ form.comment-form label {
   border-bottom: 2px dotted transparent;
 }
 
+.logo-area a:hover {
+  animation: turn-and-back-quick 0.3s linear 1;
+}
+
 .logo-area img {
   max-height: 80px;
 }
 
+@keyframes turn-and-back-quick {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(30deg);
+  }
+  75% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 .menu-area {
   display: flex;
   justify-content: flex-end;
