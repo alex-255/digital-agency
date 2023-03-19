@@ -4,9 +4,35 @@
  Version: 1.0
  Text Domain: digital-agency
 */
+/** keyframes **/
+@keyframes turn-and-back-quick {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(30deg);
+  }
+  75% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes turn-round-and-back {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(200deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 /*** General ***/
 body {
-  font-family: "Playfair Display", serif;
+  font-family: "Nunito Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -16,6 +42,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
 }
 
+/* WordPress search */
 /* Tooltip */
 .bi-star-fill {
   position: relative;
@@ -144,6 +171,7 @@ form.comment-form label {
 /*** navigation-bar ***/
 .navigation-bar {
   background-color: #016170;
+  border-bottom: 1px solid #FFFFFC;
 }
 
 .navigation-bar .navigation-bar-hamburger {
@@ -172,20 +200,6 @@ form.comment-form label {
   max-height: 80px;
 }
 
-@keyframes turn-and-back-quick {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(30deg);
-  }
-  75% {
-    transform: rotate(-30deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
 .menu-area {
   display: flex;
   justify-content: flex-end;
@@ -349,6 +363,84 @@ a:hover {
 #welcome-screen {
   height: calc(100vh - 100px);
   background-color: #016170;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+#welcome-screen .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+  margin-top: 100px;
+  position: relative;
+}
+#welcome-screen .text h1 {
+  font-family: "Nunito Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 136%;
+  letter-spacing: 0.02em;
+  color: #FFFFFC;
+  text-align: center;
+}
+#welcome-screen .text h1 .selected-word {
+  display: inline-block;
+  border: 2px solid yellow;
+  padding: 0 10px;
+  position: relative;
+}
+#welcome-screen .text h1 .selected-word > span {
+  display: inline-block;
+  border: 2px solid yellow;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: #FFFFFC;
+}
+#welcome-screen .text h1 .selected-word > span:nth-of-type(1) {
+  top: -8px;
+  left: -8px;
+}
+#welcome-screen .text h1 .selected-word > span:nth-of-type(2) {
+  top: -8px;
+  right: -8px;
+}
+#welcome-screen .text h1 .selected-word > span:nth-of-type(3) {
+  bottom: -8px;
+  left: -8px;
+}
+#welcome-screen .text h1 .selected-word > span:nth-of-type(4) {
+  bottom: -8px;
+  right: -8px;
+}
+#welcome-screen .text .subtitle {
+  font-family: "Nunito Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 178%;
+  text-align: center;
+  color: #FFFFFC;
+  opacity: 0.7;
+}
+#welcome-screen .text .curve-line {
+  position: absolute;
+  bottom: -90px;
+  left: 60%;
+}
+#welcome-screen .further-link {
+  margin-bottom: 50px;
+}
+#welcome-screen .further-link a {
+  border-bottom: none;
+}
+#welcome-screen .further-link a:hover {
+  border-bottom: none;
+  animation: turn-round-and-back 1.5s linear 1;
 }
 
 /*** Hero ***/

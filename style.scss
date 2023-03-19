@@ -22,9 +22,39 @@ $font-sans: 'Nunito Sans', sans-serif;
 // Variables
 $navbar-height: 100px;
 
+/** keyframes **/
+@keyframes turn-and-back-quick {
+	0% {
+		transform: rotate(0deg);
+	}
+	25% {
+		transform: rotate(30deg);
+	}
+
+	75% {
+		transform: rotate(-30deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes turn-round-and-back {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(200deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+
 /*** General ***/
 body {
-	font-family: $font-main;
+	font-family: $font-sans;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -32,6 +62,12 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 500;
+}
+
+/* WordPress search */
+
+.search-form {
+	// font-family: $font-main;
 }
 
 /* Tooltip */
@@ -172,6 +208,7 @@ form.comment-form label {
 
 .navigation-bar {
 	background-color: $color-primary;
+	border-bottom: 1px solid $color-white;
 }
 
 .navigation-bar .navigation-bar-hamburger {
@@ -198,22 +235,6 @@ form.comment-form label {
 
 .logo-area img {
     max-height: 80px;
-}
-
-@keyframes turn-and-back-quick {
-	0% {
-		transform: rotate(0deg);
-	}
-	25% {
-		transform: rotate(30deg);
-	}
-
-	75% {
-		transform: rotate(-30deg);
-	}
-	100% {
-		transform: rotate(0deg);
-	}
 }
 
 .menu-area {
@@ -395,7 +416,98 @@ a:hover {
 #welcome-screen {
 	height: calc(100vh - $navbar-height);
 	background-color: $color-primary;
-	
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+
+	.text {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		max-width: 800px;
+		margin-top: 100px;
+		position: relative;
+
+		h1 {
+			font-family: $font-sans;
+			font-style: normal;
+			font-weight: 700;
+			font-size: 72px;
+			line-height: 136%;
+			letter-spacing: 0.02em;
+			color: $color-white;
+			text-align: center;
+
+			.selected-word {
+				display: inline-block;
+				border: 2px solid yellow;
+				padding: 0 10px;
+				position: relative;
+
+				& > span {
+					display: inline-block;
+					border: 2px solid yellow;
+					position: absolute;
+					width: 16px;
+					height: 16px;
+					background-color: $color-white;
+
+					&:nth-of-type(1) {
+						top: -8px;
+						left: -8px;
+					}
+
+					&:nth-of-type(2) {
+						top: -8px;
+						right: -8px;
+					}
+
+					&:nth-of-type(3) {
+						bottom: -8px;
+						left: -8px;
+					}
+
+					&:nth-of-type(4) {
+						bottom: -8px;
+						right: -8px;
+					}
+				}
+			}
+		}
+
+		.subtitle {
+			font-family: $font-sans;
+			font-style: normal;
+			font-weight: 400;
+			font-size: 18px;
+			line-height: 178%;
+			text-align: center;
+			color: $color-white;
+			opacity: 0.7;
+		}
+
+		.curve-line {
+			position: absolute;
+			bottom: -90px;
+			left: 60%;
+		}
+	}
+
+	.further-link {
+		margin-bottom: 50px;
+
+		a {
+			border-bottom: none;
+
+			&:hover {
+				border-bottom: none;
+				animation: turn-round-and-back 1.5s linear 1;
+			}
+
+		}
+	}
 }
 
 /*** Hero ***/
