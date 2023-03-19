@@ -14,7 +14,7 @@ get_header();
     </div>
     <div class="further-link">
         
-        <a href="#"><img src="<?php echo esc_url(get_theme_mod( 'da_welcome_screen_button' )); ?>" /></a>
+        <a href="#solutions"><img src="<?php echo esc_url(get_theme_mod( 'da_welcome_screen_button' )); ?>" /></a>
     </div>
 </section>
 
