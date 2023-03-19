@@ -1,7 +1,7 @@
 <?php
 
 function wb_business_files() {
-  wp_enqueue_style('custom-google-fonts', '//fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600display=swap');
+  wp_enqueue_style('custom-google-fonts', '//fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&family=Playfair+Display:wght@400;600&display=swap');
   wp_enqueue_style('bootstrap-style', '//cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css');
   wp_enqueue_script('bootstrap-script', '//cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js', NULL, '5.3.0', true);
   wp_enqueue_style('bootstrap-icons', '//cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css');
@@ -13,6 +13,7 @@ function wb_business_files() {
 add_action('wp_enqueue_scripts', 'wb_business_files');
 
 function wb_customize_register( $wp_customize ) {
+  // WB Theme Options Section
   $wp_customize->add_section( 'wb_theme_options', array(
       'title' => esc_html(__( 'WB Theme Options', 'digital-agency' )),
       'description' => esc_html(__( 'Add Theme Options.', 'digital-agency' )),
@@ -155,6 +156,172 @@ function wb_customize_register( $wp_customize ) {
     'priority' => 60,
     'section' => 'wb_theme_options', 
     'label' => esc_html(__( 'Hide previous and next post links', 'digital-agency' ))
+    ) 
+  );
+
+  // DA Welcome Screen Section
+  $wp_customize->add_section( 'da_welcome_screen', array(
+    'title' => esc_html(__( 'DA Welcome Screen Options', 'digital-agency' )),
+    'description' => esc_html(__( 'DA Welcome Screen Options Here.', 'digital-agency' )),
+    'panel' => '', // Not typically needed.
+    'priority' => 310,
+    'capability' => 'edit_theme_options',
+    'theme_supports' => '', // Rarely needed.
+  ) );
+
+  // Text before selected word
+  $wp_customize->add_setting( 'da_title_before_selected', array(
+    'type' => 'theme_mod', // or 'option'
+    'capability' => 'edit_theme_options',
+    'theme_supports' => '', // Rarely needed.
+    'default' => 'Digital',
+    'transport' => 'refresh', // or postMessage
+    'sanitize_callback' => 'sanitize_text_field',
+    'sanitize_js_callback' => '', // Basically to_json.
+    ) 
+  );
+
+  $wp_customize->add_control( 'da_title_before_selected', array(
+    'type' => 'text',
+    'priority' => 50, // Within the section.
+    'section' => 'da_welcome_screen', // Required, core or custom.
+    'label' => esc_html(__( 'Title text before selected word', 'digital-agency' )),
+    'description' => esc_html(__( 'Title text before selected word. Selected word will be selected with another styles.', 'digital-agency' )),
+    'input_attrs' => array(
+      'placeholder' => esc_html(__( 'Text here...', 'digital-agency' )),
+      )
+    ) 
+  );
+
+  // Text of selected word
+  $wp_customize->add_setting( 'da_title_selected_word', array(
+    'type' => 'theme_mod', // or 'option'
+    'capability' => 'edit_theme_options',
+    'theme_supports' => '', // Rarely needed.
+    'default' => 'Agency',
+    'transport' => 'refresh', // or postMessage
+    'sanitize_callback' => 'sanitize_text_field',
+    'sanitize_js_callback' => '', // Basically to_json.
+    ) 
+  );
+
+  $wp_customize->add_control( 'da_title_selected_word', array(
+    'type' => 'text',
+    'priority' => 50, // Within the section.
+    'section' => 'da_welcome_screen', // Required, core or custom.
+    'label' => esc_html(__( 'Title text of selected word', 'digital-agency' )),
+    'description' => esc_html(__( 'Title text of selected word. Selected word will be selected with another styles.', 'digital-agency' )),
+    'input_attrs' => array(
+      'placeholder' => esc_html(__( 'Text here...', 'digital-agency' )),
+      )
+    ) 
+  );
+
+  // Text after selected word
+  $wp_customize->add_setting( 'da_title_after_selected', array(
+    'type' => 'theme_mod', // or 'option'
+    'capability' => 'edit_theme_options',
+    'theme_supports' => '', // Rarely needed.
+    'default' => 'With Solid Design',
+    'transport' => 'refresh', // or postMessage
+    'sanitize_callback' => 'sanitize_text_field',
+    'sanitize_js_callback' => '', // Basically to_json.
+    ) 
+  );
+
+  $wp_customize->add_control( 'da_title_after_selected', array(
+    'type' => 'text',
+    'priority' => 50, // Within the section.
+    'section' => 'da_welcome_screen', // Required, core or custom.
+    'label' => esc_html(__( 'Title text after selected word', 'digital-agency' )),
+    'description' => esc_html(__( 'Title text after selected word. Selected word will be selected with another styles.', 'digital-agency' )),
+    'input_attrs' => array(
+      'placeholder' => esc_html(__( 'Text here...', 'digital-agency' )),
+      )
+    ) 
+  );
+
+  // Subtitle
+  $wp_customize->add_setting( 'da_subtitle_welcome', array(
+    'type' => 'theme_mod', // or 'option'
+    'capability' => 'edit_theme_options',
+    'theme_supports' => '', // Rarely needed.
+    'default' => 'We provide various services to make your business grow and get bigger. Your satisfaction is our first priority.',
+    'transport' => 'refresh', // or postMessage
+    'sanitize_callback' => 'sanitize_text_field',
+    'sanitize_js_callback' => '', // Basically to_json.
+    ) 
+  );
+
+  $wp_customize->add_control( 'da_subtitle_welcome', array(
+    'type' => 'text',
+    'priority' => 50, // Within the section.
+    'section' => 'da_welcome_screen', // Required, core or custom.
+    'label' => esc_html(__( 'Subtitle text on welcome screen', 'digital-agency' )),
+    'description' => esc_html(__( 'Subtitle text on welcome screen. ', 'digital-agency' )),
+    'input_attrs' => array(
+      'placeholder' => esc_html(__( 'Text here...', 'digital-agency' )),
+      )
+    ) 
+  );
+
+  // Curve line Image
+  $wp_customize->add_setting( 'da_welcome_screen_curve', array(
+    'type' => 'theme_mod', // or 'option'
+    'capability' => 'edit_theme_options',
+    'theme_supports' => '', // Rarely needed.
+    'default' => false,
+    'transport' => 'refresh', // or postMessage
+    'sanitize_callback' => 'sanitize_url',
+    'sanitize_js_callback' => '', // Basically to_json.
+  ) );
+
+  $wp_customize->add_control( 
+    new WP_Customize_Image_Control( 
+      $wp_customize, 
+      'da_welcome_screen_curve_control', 
+      array(
+        'label' => 'Upload Curve Image',
+        'priority' => 120,
+        'section' => 'da_welcome_screen',
+        'settings' => 'da_welcome_screen_curve',
+        'button_labels' => 
+          array(
+            'select' => 'Select Curve Image',
+            'remove' => 'Remove Curve Image',
+            'change' => 'Change Curve Image',
+          )
+      )
+    ) 
+  );
+
+  // Button further Image
+  $wp_customize->add_setting( 'da_welcome_screen_button', array(
+    'type' => 'theme_mod', // or 'option'
+    'capability' => 'edit_theme_options',
+    'theme_supports' => '', // Rarely needed.
+    'default' => false,
+    'transport' => 'refresh', // or postMessage
+    'sanitize_callback' => 'sanitize_url',
+    'sanitize_js_callback' => '', // Basically to_json.
+  ) );
+
+  $wp_customize->add_control( 
+    new WP_Customize_Image_Control( 
+      $wp_customize, 
+      'da_welcome_screen_button_control', 
+      array(
+        'label' => 'Upload Button Image',
+        'priority' => 120,
+        'section' => 'da_welcome_screen',
+        'settings' => 'da_welcome_screen_button',
+        'button_labels' => 
+          array(
+            'select' => 'Select Button Image',
+            'remove' => 'Remove Button Image',
+            'change' => 'Change Button Image',
+          )
+      )
     ) 
   );
 

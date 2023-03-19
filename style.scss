@@ -17,6 +17,10 @@ $color-white: #FFFFFC;
 
 // Fonts
 $font-main: 'Playfair Display', serif;
+$font-sans: 'Nunito Sans', sans-serif;
+
+// Variables
+$navbar-height: 100px;
 
 /*** General ***/
 body {
@@ -175,7 +179,7 @@ form.comment-form label {
 }
 
 .navigation-bar .logo-area, .navigation-bar .menu-area {
-	min-height: 100px;
+	min-height: $navbar-height;
 }
 
 .logo-area {
@@ -225,13 +229,13 @@ form.comment-form label {
 	margin: 0;
 }
 
-a, .nav-link {
-	font-family: $font-main;
+a {
+	font-family: $font-sans;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
 	line-height: normal;
-    color: #ededed;
+    color: $color-white;
 	letter-spacing: 0.2px;
 	text-decoration: none;
 	display: inline-block;
@@ -239,20 +243,25 @@ a, .nav-link {
 	transition: all 0.3s;
 }
 
-a:hover, .nav-link:hover {
-	color: #ededed;
-	border-bottom: 2px solid #ededed;
+.menu-area .current-menu-item a {
+	font-weight: 600;
+	opacity: 1;
+}
+
+a:hover {
+	color: $color-white;
+	border-bottom: 2px solid $color-white;
 }
 
 .menu-area a {
-	text-transform: uppercase;
 	text-align: center;
 	margin-right: 21px;
 	border-bottom: 2px solid transparent;
+	opacity: 0.7;
 }
 
 .menu-area a:hover {
-	border-bottom: 2px solid #ededed;
+	border-bottom: 2px solid $color-white;
 }
 
 .menu-area ul {
@@ -381,6 +390,14 @@ a:hover, .nav-link:hover {
 
 }
 
+/*** Welcome screen ***/
+
+#welcome-screen {
+	height: calc(100vh - $navbar-height);
+	background-color: $color-primary;
+	
+}
+
 /*** Hero ***/
 .carousel-item--image {
 	background-size: cover;
@@ -417,7 +434,7 @@ a:hover, .nav-link:hover {
 
 .main-post {
 	background-color: #1A1A1A;
-	color: #ededed;
+	color: $color-white;
 }
 
 .main-post .bi-star-fill {
@@ -473,7 +490,7 @@ a:hover, .nav-link:hover {
 
 .main-index-post {
 	background-color: #1A1A1A;
-	color: #ededed;
+	color: $color-white;
 }
 
 .main-index-post a {
@@ -571,7 +588,7 @@ a:hover, .nav-link:hover {
 
 .main-single-post {
 	background-color: #1A1A1A;
-	color: #ededed;
+	color: $color-white;
 }
 
 .main-single-post a {
@@ -634,7 +651,7 @@ a:hover, .nav-link:hover {
 
 .main-page-post {
 	background-color: #1A1A1A;
-	color: #ededed;
+	color: $color-white;
 }
 
 .main-page-post a {
@@ -727,7 +744,7 @@ a:hover, .nav-link:hover {
 /*** Widgets ***/
 /* Calendar */
 .wp-block-calendar table caption, .wp-block-calendar table tbody {
-    color: #ededed;
+    color: $color-white;
 	text-align: center;
 }
 
@@ -741,7 +758,7 @@ a:hover, .nav-link:hover {
 
 /*** Footer ***/
 .footer {
-	color: #ededed;
+	color: $color-white;
 	background-color: #1A1A1A;
 	min-height: 90px;
 	/* 12px - bootstrap's padding. 50px - regular for this Wordpress Theme. */
@@ -797,7 +814,7 @@ a:hover, .nav-link:hover {
 
 .footer .social-icons a {
 	display: flex;
-	background-color: #ededed;
+	background-color: $color-white;
 	text-decoration: none;
 	width: 36px;
 	height: 36px;
@@ -831,8 +848,8 @@ a:hover, .nav-link:hover {
 }
 
 .footer .footer-menu li a:hover {
-	color: #ededed;
-	border-bottom: 2px dotted #ededed;
+	color: $color-white;
+	border-bottom: 2px dotted $color-white;
 }
 
 /*** footer info ***/

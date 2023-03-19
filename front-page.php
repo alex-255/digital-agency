@@ -1,6 +1,22 @@
 <?php
 get_header(); 
 ?>
+
+<section id="welcome-screen">
+    <h1 class="title">
+        <span class="first-word"><?php echo esc_html(get_theme_mod( 'da_title_before_selected' )); ?></span>
+        <span class="selected-word"><?php echo esc_html(get_theme_mod( 'da_title_selected_word' )); ?></span>
+        <span class="rest-text"><?php echo esc_html(get_theme_mod( 'da_title_after_selected' )); ?></span>
+    </h1>
+<p class="subtitle"><?php echo esc_html(get_theme_mod( 'da_subtitle_welcome' )); ?></p>
+<div class="further-link">
+    <img src="<?php echo esc_url(get_theme_mod( 'da_welcome_screen_curve' )); ?>" class="curve-line"/>
+    <a href="<?php echo esc_url(get_theme_mod( 'da_welcome_screen_button' )); ?>"></a>
+</div>
+</section>
+
+
+
 <!-- Hero images carousel -->
 <div class="container-xxl">
     <div class="row">
