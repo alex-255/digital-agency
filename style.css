@@ -42,7 +42,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
 }
 
-/* WordPress search */
 /* Tooltip */
 .bi-star-fill {
   position: relative;
@@ -443,36 +442,76 @@ a:hover {
   animation: turn-round-and-back 1.5s linear 1;
 }
 
-/*** Hero ***/
-.carousel-item--image {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 400px;
-  min-height: 400px;
+/*** Section Solutions ***/
+#solutions {
+  min-height: 100vh;
+  background-color: #FFFFFC;
+  padding: 30px;
+  display: flex;
+  align-items: center;
 }
 
-.carousel-caption {
-  text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
+.solutions-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.solutions-text h2 {
+  font-family: "Nunito Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: #020E10;
+}
+.solutions-text p {
+  font-family: "Nunito Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 178%;
+  color: #020E10;
+  opacity: 0.75;
+}
+.solutions-text img {
+  width: 176px;
+  height: auto;
+  margin-top: 50px;
 }
 
-.carousel-caption h5 {
-  font-size: 4rem;
+.solutions-items {
+  display: flex;
+  align-items: center;
 }
-
-.carousel-caption p {
-  font-size: 2rem;
+.solutions-items .solutions-item {
+  border: 1px solid #020E10;
+  position: relative;
+  padding: 16px;
 }
-
-.carousel-indicators button[type=button] {
-  height: 4px;
-  border: 1px solid rgba(0, 0, 0, 0.4);
-  margin-top: 10px;
-  margin-bottom: 10px;
+.solutions-items .solutions-item .solutions-item-number {
+  display: block;
+  position: absolute;
+  background-color: #FFFFFC;
+  font-family: "Nunito Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 133%;
+  color: #020E10;
+  top: -16px;
+  left: 16px;
+  padding: 0 5px;
 }
-
-.carousel-indicators button[type=button].active {
-  border: 1px solid transparent;
+.solutions-items .solutions-item .solutions-item-title {
+  background-color: #FFFFFC;
+  font-family: "Nunito Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 133%;
+  color: #020E10;
+  margin-top: 16px;
 }
 
 /*** main-post - Front-page ***/

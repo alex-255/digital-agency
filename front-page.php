@@ -18,82 +18,51 @@ get_header();
     </div>
 </section>
 
-
-
-<!-- Hero images carousel -->
-<div class="container-xxl">
-    <div class="row">
-        <div class="col-12 px-0">
-            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <?php
-                        // Arguments
-                        $args = array(
-                            'posts_per_page' => -1,
-                            'post_type' => 'carousel'
-                        );
-
-                        // The Query
-                        $the_query = new WP_Query( $args );
-
-                        // The Loop
-                        if ( $the_query->have_posts() ) {
-
-                            while ( $the_query->have_posts() ) {
-                                $the_query->the_post(); ?>
-                                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="<?php echo $the_query->current_post; ?>" class="<?php if ($the_query->current_post == 0) { echo ' active'; } ?>" aria-current="<?php if ($the_query->current_post == 0) { echo 'true'; } ?>" aria-label="<?php echo get_the_title(); ?>"></button>
-                                <?php
-                            }
-
-                        } 
-                        /* Restore original Post Data */
-                        wp_reset_postdata(); ?>
+<section id="solutions">
+    <div class="container-xxl">
+        <div class="row">
+            <div class="col-12 col-lg-6 solutions-text">
+                <h2>Want you to boost your business growth? Solution is here.</h2>
+                <p>We provide various services to make your business grow and get bigger. Your satisfaction is our first priority.</p>
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/button-with-arrow-black.svg"/>
+            </div>
+            <div class="col-12 col-lg-6 solutions-items">
+                <div class="row gx-4 gy-4">
+                    <div class="col-12 col-md-6 col-lg-12 col-xl-6">
+                        <div class="solutions-item">
+                            <h2 class="solutions-item-number">01</h2>
+                            <h2 class="solutions-item-title">Web Content</h2>
+                            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-12 col-xl-6">
+                        <div class="solutions-item">
+                            <h2 class="solutions-item-number">02</h2>
+                            <h2 class="solutions-item-title">Branding</h2>
+                            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-12 col-xl-6">
+                        <div class="solutions-item">
+                            <h2 class="solutions-item-number">03</h2>
+                            <h2 class="solutions-item-title">SEO Consultancy</h2>
+                            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-12 col-xl-6">
+                        <div class="solutions-item">
+                            <h2 class="solutions-item-number">04</h2>
+                            <h2 class="solutions-item-title">Market Analysis</h2>
+                            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="carousel-inner">
-                    <?php
-                        // Arguments
-                        $args = array(
-                            'posts_per_page' => -1,
-                            'post_type' => 'carousel',
-                            'order' => "ASC"
-                        );
-
-                        // The Query
-                        $the_query = new WP_Query( $args );
-
-                        // The Loop
-                        if ( $the_query->have_posts() ) {
-
-                            while ( $the_query->have_posts() ) {
-                                $the_query->the_post(); ?>
-                                    <div class="carousel-item<?php if ($the_query->current_post == 0) { echo ' active'; } ?>">
-                                        <div class="carousel-item--image d-block w-100" style="background-image: url(<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large'); ?>);"></div>
-                                        <div class="carousel-caption d-none d-md-block">
-                                        <h5><?php the_title(); ?></h5>
-                                        <p><?php echo wp_trim_words(get_the_content(), 20); ?></p>
-                                        </div>
-                                    </div>
-                                <?php
-                            }
-
-                        } 
-                        /* Restore original Post Data */
-                        wp_reset_postdata(); ?>
-
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
             </div>
         </div>
     </div>
-</div>
+</section>
+
 <div class="container-xxl main-post">
 
     <?php

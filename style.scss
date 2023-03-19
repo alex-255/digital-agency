@@ -64,12 +64,6 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 500;
 }
 
-/* WordPress search */
-
-.search-form {
-	// font-family: $font-main;
-}
-
 /* Tooltip */
 
 .bi-star-fill {
@@ -510,36 +504,83 @@ a:hover {
 	}
 }
 
-/*** Hero ***/
-.carousel-item--image {
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
-	height: 400px;
-	min-height: 400px;
+/*** Section Solutions ***/
+
+#solutions {
+	min-height: 100vh;
+	background-color: $color-white;
+	padding: 30px;
+	display: flex;
+	align-items: center;
 }
 
-.carousel-caption {
-	text-shadow: 0px 0px 15px rgba(0,0,0, 0.8);
+.solutions-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	h2 {
+		font-family: $font-sans;
+		font-style: normal;
+		font-weight: 700;
+		font-size: 48px;
+		line-height: 150%;
+		letter-spacing: -0.02em;
+		color: $color-secondary;
+	}
+
+	p {
+		font-family: $font-sans;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 178%;
+		color: $color-secondary;
+		opacity: 0.75;
+	}
+
+	img {
+		width: 176px;
+		height: auto;
+		margin-top: 50px;
+	}
 }
 
-.carousel-caption h5 {
-	font-size: 4rem;
-}
+.solutions-items {
+	display: flex;
+	align-items: center;
 
-.carousel-caption p {
-	font-size: 2rem;
-}
+	.solutions-item {
+		border: 1px solid $color-secondary;
+		position: relative;
+		padding: 16px;
 
-.carousel-indicators button[type=button] {
-	height: 4px;
-	border: 1px solid rgba(0,0,0, 0.4);
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
+		.solutions-item-number {
+			display: block;
+			position: absolute;
+			background-color: $color-white;
+			font-family: $font-sans;
+			font-style: normal;
+			font-weight: 700;
+			font-size: 24px;
+			line-height: 133%; // 32px
+			color: $color-secondary;
+			top: -16px;
+			left: 16px;
+			padding: 0 5px;
+		}
 
-.carousel-indicators button[type=button].active {
-	border: 1px solid transparent;
+		.solutions-item-title {
+			background-color: $color-white;
+			font-family: $font-sans;
+			font-style: normal;
+			font-weight: 700;
+			font-size: 24px;
+			line-height: 133%; // 32px
+			color: $color-secondary;
+			margin-top: 16px;
+		}
+	}
 }
 
 /*** main-post - Front-page ***/
