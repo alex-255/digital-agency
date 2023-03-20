@@ -509,7 +509,6 @@ a:hover {
 #solutions {
 	min-height: 100vh;
 	background-color: $color-white;
-	padding: 30px;
 	display: flex;
 	align-items: center;
 }
@@ -586,6 +585,40 @@ a:hover {
 			margin-top: 16px;
 		}
 	}
+}
+
+/*** Statistic ***/
+#statistic {
+	padding: 61px 112px;
+	background-color: $color-secondary;
+
+	h2 {
+		font-family: $font-sans;
+		font-style: normal;
+		font-weight: 700;
+		font-size: 60px;
+		line-height: 72px;
+		/* identical to box height, or 120% */
+		letter-spacing: -0.02em;
+		color: $color-white;
+	}
+
+	p {
+		font-family: $font-sans;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 32px;
+		/* or 178% */
+		color: $color-white;
+	}
+}
+
+.statistic-item {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	border-bottom: 1px solid $color-white;
 }
 
 /*** main-post - Front-page ***/

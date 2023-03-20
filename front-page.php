@@ -19,7 +19,7 @@ get_header();
 </section>
 
 <section id="solutions">
-    <div class="container-xxl">
+    <div class="container-xxl p-5">
         <div class="row">
             <div class="col-12 col-lg-6 solutions-text">
                 <h2>Want you to boost your business growth? Solution is here.</h2>
@@ -58,6 +58,35 @@ get_header();
                     </div>
                 </div>
                 
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="statistic" class="container-xxl">
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="statistic-item">
+                <h2>40+</h2>
+                <p>Happy Clients</p>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="statistic-item">
+                <h2>540</h2>
+                <p>Projects Completed</p>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="statistic-item">
+                <h2>300</h2>
+                <p>Dedicated Members</p>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="statistic-item">
+                <h2>25+</h2>
+                <p>Awards Won</p>
             </div>
         </div>
     </div>
