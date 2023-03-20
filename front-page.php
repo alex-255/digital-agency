@@ -67,25 +67,25 @@ get_header();
     <div class="row">
         <div class="col-12 col-md-6 col-lg-3">
             <div class="statistic-item">
-                <h2>40+</h2>
+                <h2 id="happy-clients" data-max="40">0</h2>
                 <p>Happy Clients</p>
             </div>
         </div>
         <div class="col-12 col-md-6 col-lg-3">
             <div class="statistic-item">
-                <h2>540</h2>
+                <h2 id="projects-completed" data-max="540">0</h2>
                 <p>Projects Completed</p>
             </div>
         </div>
         <div class="col-12 col-md-6 col-lg-3">
             <div class="statistic-item">
-                <h2>300</h2>
+                <h2><span id="members" data-max="300">0</span>+</h2>
                 <p>Dedicated Members</p>
             </div>
         </div>
         <div class="col-12 col-md-6 col-lg-3">
             <div class="statistic-item">
-                <h2>25+</h2>
+                <h2 id="awards" data-max="25">0</h2>
                 <p>Awards Won</p>
             </div>
         </div>
