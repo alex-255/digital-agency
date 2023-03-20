@@ -24,7 +24,7 @@ get_header();
             <div class="col-12 col-lg-6 solutions-text">
                 <h2>Want you to boost your business growth? Solution is here.</h2>
                 <p>We provide various services to make your business grow and get bigger. Your satisfaction is our first priority.</p>
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/button-with-arrow-black.svg"/>
+                <a href="#our-works"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/button-with-arrow-black.svg"/></a>
             </div>
             <div class="col-12 col-lg-6 solutions-items">
                 <div class="row gx-4 gy-4">
@@ -62,6 +62,8 @@ get_header();
         </div>
     </div>
 </section>
+
+<section id="our-works"></section>
 
 <div class="container-xxl main-post">
 

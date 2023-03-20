@@ -478,6 +478,10 @@ a:hover {
   width: 176px;
   height: auto;
   margin-top: 50px;
+  transition: all 0.5s linear;
+}
+.solutions-text img:hover {
+  transform: rotate(135deg);
 }
 
 .solutions-items {
