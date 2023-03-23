@@ -48,13 +48,13 @@ window.addEventListener("load", () => {
     const maxAwards = awards.dataset.max;
 
     const countNumbers = (element, max) => {
-        let counter = max - 10;
+        let counter = 0;
         setInterval( () => {
             if (counter <= max) {
                 element.innerHTML = counter;
                 counter++;
             }
-        }, 130);
+        }, 5);
     }
 
     let ran = false; // becomes true when numbers counted.

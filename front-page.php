@@ -6,7 +6,15 @@ get_header();
     <div class="text">
         <h1 class="title">
             <span class="first-word"><?php echo esc_html(get_theme_mod( 'da_title_before_selected' )); ?></span>
-            <span class="selected-word"><?php echo esc_html(get_theme_mod( 'da_title_selected_word' )); ?><span></span><span></span><span></span><span></span></span>
+            <span class="selected-word">
+                <?php echo esc_html(get_theme_mod( 'da_title_selected_word' )); ?>
+                <span class="frame">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </span>
             <span class="rest-text"><?php echo esc_html(get_theme_mod( 'da_title_after_selected' )); ?></span>
         </h1>
         <p class="subtitle"><?php echo esc_html(get_theme_mod( 'da_subtitle_welcome' )); ?></p>
@@ -92,7 +100,34 @@ get_header();
     </div>
 </section>
 
-<section id="our-works"></section>
+<section id="our-works">
+    <div id="nanogallery2" data-nanogallery2 = '{
+                "thumbnailHeight":  150,
+                "thumbnailWidth":   150
+            }'>
+            <?php
+    // Arguments
+    $args = array(
+        'posts_per_page' => 10,
+        'post_type' => 'gallery'
+    );
+
+    // The Query
+    $the_query = new WP_Query( $args );
+
+    // The Loop
+    if ( $the_query->have_posts() ) {
+
+        while ( $the_query->have_posts() ) {
+            $the_query->the_post(); ?>
+                <a href="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large'); ?>" data-ngthumb="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'medium'); ?>"><?php the_title(); ?></a>
+            <?php
+        }
+    } 
+    /* Restore original Post Data */
+    wp_reset_postdata(); ?>
+    </div>
+</section>
 
 <div class="container-xxl main-post">
 

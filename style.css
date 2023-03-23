@@ -30,6 +30,20 @@
     transform: rotate(0deg);
   }
 }
+@keyframes scale-and-back {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.2) translate(10%, -10%);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 /*** General ***/
 body {
   font-family: "Nunito Sans", sans-serif;
@@ -388,11 +402,23 @@ a:hover {
 }
 #welcome-screen .text h1 .selected-word {
   display: inline-block;
-  border: 2px solid yellow;
-  padding: 0 10px;
+  padding: 0px 10px;
   position: relative;
 }
-#welcome-screen .text h1 .selected-word > span {
+#welcome-screen .text h1 .selected-word span.frame {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: inline-block;
+  border: 2px solid yellow;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  animation: scale-and-back 4s ease-in-out infinite;
+}
+#welcome-screen .text h1 .selected-word span.frame > span {
   display: inline-block;
   border: 2px solid yellow;
   position: absolute;
@@ -400,21 +426,25 @@ a:hover {
   height: 16px;
   background-color: #FFFFFC;
 }
-#welcome-screen .text h1 .selected-word > span:nth-of-type(1) {
+#welcome-screen .text h1 .selected-word span.frame > span:nth-of-type(1) {
   top: -8px;
   left: -8px;
+  z-index: 1;
 }
-#welcome-screen .text h1 .selected-word > span:nth-of-type(2) {
+#welcome-screen .text h1 .selected-word span.frame > span:nth-of-type(2) {
   top: -8px;
   right: -8px;
+  z-index: 1;
 }
-#welcome-screen .text h1 .selected-word > span:nth-of-type(3) {
+#welcome-screen .text h1 .selected-word span.frame > span:nth-of-type(3) {
   bottom: -8px;
   left: -8px;
+  z-index: 1;
 }
-#welcome-screen .text h1 .selected-word > span:nth-of-type(4) {
+#welcome-screen .text h1 .selected-word span.frame > span:nth-of-type(4) {
   bottom: -8px;
   right: -8px;
+  z-index: 1;
 }
 #welcome-screen .text .subtitle {
   font-family: "Nunito Sans", sans-serif;

@@ -51,6 +51,21 @@ $navbar-height: 100px;
 	}
 }
 
+@keyframes scale-and-back {
+	0% {
+		transform: scale(1);
+	}
+	25% {
+		transform: scale(1.2) translate(10%, -10%);
+	}
+	50% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
 
 /*** General ***/
 body {
@@ -436,36 +451,54 @@ a:hover {
 
 			.selected-word {
 				display: inline-block;
-				border: 2px solid yellow;
-				padding: 0 10px;
+				// border: 2px solid yellow;
+				padding: 0px 10px;
 				position: relative;
 
-				& > span {
+				span.frame {
+					position: absolute;
+					left: 0;
+					right: 0;
+					top: 0;
+					bottom: 0;
 					display: inline-block;
 					border: 2px solid yellow;
-					position: absolute;
-					width: 16px;
-					height: 16px;
-					background-color: $color-white;
+					width: 100%;
+					height: 100%;
+					background-color: transparent;
+					animation: scale-and-back 4s ease-in-out infinite;
 
-					&:nth-of-type(1) {
-						top: -8px;
-						left: -8px;
-					}
-
-					&:nth-of-type(2) {
-						top: -8px;
-						right: -8px;
-					}
-
-					&:nth-of-type(3) {
-						bottom: -8px;
-						left: -8px;
-					}
-
-					&:nth-of-type(4) {
-						bottom: -8px;
-						right: -8px;
+					& > span {
+						display: inline-block;
+						border: 2px solid yellow;
+						position: absolute;
+						width: 16px;
+						height: 16px;
+						background-color: $color-white;
+	
+						&:nth-of-type(1) {
+							top: -8px;
+							left: -8px;
+							z-index: 1;
+						}
+	
+						&:nth-of-type(2) {
+							top: -8px;
+							right: -8px;
+							z-index: 1;
+						}
+	
+						&:nth-of-type(3) {
+							bottom: -8px;
+							left: -8px;
+							z-index: 1;
+						}
+	
+						&:nth-of-type(4) {
+							bottom: -8px;
+							right: -8px;
+							z-index: 1;
+						}
 					}
 				}
 			}

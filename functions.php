@@ -339,7 +339,7 @@ function wb_features() {
 add_action('after_setup_theme', 'wb_features');
 
 // Custom Post Type(s)
-function wb_carousel() {
+function da_post_types() {
   register_post_type('carousel',
     array(
       'labels'      => array(
@@ -351,8 +351,20 @@ function wb_carousel() {
       'supports' => array('title', 'editor', 'thumbnail')
     )
   );
+
+  register_post_type('gallery',
+    array(
+      'labels'      => array(
+        'name'          => esc_html(__( 'Gallery', 'digital-agency' )),
+        'singular_name' => esc_html(__( 'Picture', 'digital-agency' )),
+      ),
+      'public'      => true,
+      'menu_icon' => 'dashicons-format-gallery',
+      'supports' => array('title', 'editor', 'thumbnail')
+    )
+  );
 }
-add_action('init', 'wb_carousel');
+add_action('init', 'da_post_types');
 
 // Menus
 if ( ! function_exists( 'wb_register_nav_menu' ) ) {
