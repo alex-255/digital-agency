@@ -100,32 +100,52 @@ get_header();
     </div>
 </section>
 
-<section id="our-works">
-    <div id="nanogallery2" data-nanogallery2 = '{
-                "thumbnailHeight":  150,
-                "thumbnailWidth":   150
-            }'>
+<section id="our-works" class="container-xxl">
+    <h2 class="our-works__header" data-after="<?php echo get_template_directory_uri() . "/assets/images/star-in-header.svg"; ?>">
+        Our works
+    </h2>
+    <div id="our-works-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
+        <div class="carousel-inner">
             <?php
-    // Arguments
-    $args = array(
-        'posts_per_page' => 10,
-        'post_type' => 'gallery'
-    );
+                // Arguments
+                $args = array(
+                    'posts_per_page' => -1,
+                    'post_type' => 'work',
+                    'order' => "ASC"
+                );
 
-    // The Query
-    $the_query = new WP_Query( $args );
+                // The Query
+                $the_query = new WP_Query( $args );
 
-    // The Loop
-    if ( $the_query->have_posts() ) {
+                // The Loop
+                if ( $the_query->have_posts() ) {
 
-        while ( $the_query->have_posts() ) {
-            $the_query->the_post(); ?>
-                <a href="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large'); ?>" data-ngthumb="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'medium'); ?>"><?php the_title(); ?></a>
-            <?php
-        }
-    } 
-    /* Restore original Post Data */
-    wp_reset_postdata(); ?>
+                    while ( $the_query->have_posts() ) {
+                        $the_query->the_post(); ?>
+                            <div class="carousel-item<?php if ($the_query->current_post == 0) { echo ' active'; } ?>">
+                                <div class="carousel-item--image d-block w-100" style="background-image: url(<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large'); ?>);">
+                                    
+                                </div>
+                                <div class="carousel-caption d-none d-md-block">
+                                    <a href="<?php the_permalink(); ?>"></a>
+                                </div>
+                            </div>
+                        <?php
+                    }
+
+                } 
+                /* Restore original Post Data */
+                wp_reset_postdata(); ?>
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#our-works-carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#our-works-carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
 </section>
 

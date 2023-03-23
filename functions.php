@@ -352,11 +352,11 @@ function da_post_types() {
     )
   );
 
-  register_post_type('gallery',
+  register_post_type('work',
     array(
       'labels'      => array(
-        'name'          => esc_html(__( 'Gallery', 'digital-agency' )),
-        'singular_name' => esc_html(__( 'Picture', 'digital-agency' )),
+        'name'          => esc_html(__( 'Works', 'digital-agency' )),
+        'singular_name' => esc_html(__( 'Work', 'digital-agency' )),
       ),
       'public'      => true,
       'menu_icon' => 'dashicons-format-gallery',
