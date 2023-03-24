@@ -761,6 +761,7 @@ a:hover {
 }
 #about-us-section .about-us-section__slider__item {
   padding: 32px;
+  transition: all 0.3s;
 }
 #about-us-section .about-us-section__slider__item .meta {
   display: flex;
@@ -817,6 +818,30 @@ a:hover {
 }
 #about-us-section .about-us-section__slider__item:hover {
   background-color: #020E10;
+  transition: all 0.3s;
+}
+
+.slick-next {
+  top: unset;
+  bottom: -10px;
+  right: 0px;
+}
+.slick-next::before {
+  content: "\f138";
+  font-family: "bootstrap-icons";
+  font-size: 42px;
+}
+
+.slick-prev {
+  top: unset;
+  bottom: -10px;
+  left: unset;
+  right: 60px;
+}
+.slick-prev::before {
+  content: "\f12f";
+  font-family: "bootstrap-icons";
+  font-size: 42px;
 }
 
 /*** main-index-post index.php ***/

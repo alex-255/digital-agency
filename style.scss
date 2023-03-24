@@ -858,7 +858,8 @@ a:hover {
 	.about-us-section__slider {
 		&__item {
 			padding: 32px;
-
+			transition: all 0.3s;
+			
 			.meta {
 				display: flex;
 				margin-bottom: 24px;
@@ -920,10 +921,38 @@ a:hover {
 
 			&:hover {
 				background-color: $color-secondary;
+				transition: all 0.3s;
 			}
 		}
 	}
 }
+
+.slick-next {
+	top: unset;
+	bottom: -10px;
+	right: 0px;
+
+	&::before {
+		content: '\F138';
+		font-family: "bootstrap-icons";
+		font-size: 42px;
+	}
+}
+
+.slick-prev {
+	top: unset;
+	bottom: -10px;
+	left: unset;
+	right: 60px;
+
+	&::before {
+		content: '\F12F';
+		font-family: "bootstrap-icons";
+		font-size: 42px;
+	}
+}
+
+
 
 /*** main-index-post index.php ***/
 
