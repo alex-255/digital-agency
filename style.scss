@@ -726,6 +726,7 @@ a:hover {
 	color: $color-secondary;
 	position: relative;
 	display: inline-block;
+	margin-bottom: 50px;
 
 	&::after {
 		content: url("./assets/images/star-in-header.svg");
@@ -746,14 +747,23 @@ a:hover {
 		transition: all .3s;
 	}
 
-	&:hover .carousel-item--image {
-		border: 30px solid $color-yellow;
+	.carousel-caption {
 		transition: all .3s;
 	}
+
+	&:hover {
+		.carousel-item--image {
+			border: 50px solid $color-yellow;
+			transition: all .3s;
+		}
+
+		.carousel-caption {
+			opacity: 1;
+			transition: all .3s;
+		}
+	}
+	
 }
-
-
-
 
 .carousel-item--image {
 	background-size: cover;
@@ -765,17 +775,27 @@ a:hover {
 }
 
 .carousel-caption {
-	width: 100%;
-	height: 100%;
+	text-shadow: 0px 0px 15px rgba(0,0,0, 0.8);
+	opacity: 0;
+	bottom: 10px;
+	padding: 0;
 
 	a {
 		width: 100%;
 		height: 100%;
 		border: none;
 		z-index: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		align-items: center;
+
+		p {
+			font-size: 1.5rem;
+			margin: 0;
+		}
 	}
 }
-
 
 .carousel-indicators button[type=button] {
 	height: 4px;
@@ -786,6 +806,123 @@ a:hover {
 
 .carousel-indicators button[type=button].active {
 	border: 1px solid transparent;
+}
+
+.link-right-wrapper {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 80px;
+
+	.link-right {
+		transform: rotate(45deg);
+		border: none;
+		transition: transform 0.3s linear;
+
+		&:hover {
+			border: none;
+			transform: rotate(135deg);
+			transition: transform 0.3s linear;
+		}
+	}
+}
+
+/*** About us section ***/
+
+#about-us-section {
+	background-color: $color-primary;
+	padding: 84px 116px;
+
+	.about-us-section__header {
+		display: inline-block;
+		font-family: $font-sans;
+		font-style: normal;
+		font-weight: 700;
+		font-size: 48px;
+		line-height: 150%;
+		/* identical to box height, or 72px */
+		letter-spacing: -0.02em;
+		color: $color-white;
+		position: relative;
+
+		&::after {
+			content: url("./assets/images/quote-cloud.svg");
+			position: absolute;
+			width: 80px;
+			height: 80px;
+			right: -100px;
+		}
+
+
+	}
+
+	.about-us-section__slider {
+		&__item {
+			padding: 32px;
+
+			.meta {
+				display: flex;
+				margin-bottom: 24px;
+			}
+
+			.image {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-right: 15px;
+
+				img {
+					width: 56px;
+					height: 56px;
+					object-fit: cover;
+					border-radius: 50%;
+				}
+			}
+
+			.name {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: flex-start;
+
+				h2 {
+					margin-bottom: 2px;
+					font-family: $font-sans;
+					font-style: normal;
+					font-weight: 700;
+					font-size: 18px;
+					line-height: 32px;
+					/* identical to box height, or 178% */
+					color: $color-white;
+				}
+
+				p {
+					margin: 0;
+					font-family: $font-sans;
+					font-style: normal;
+					font-weight: 400;
+					font-size: 14px;
+					line-height: 24px;
+					/* identical to box height, or 171% */
+					color: $color-white;
+					opacity: 0.65;
+				}
+			}
+			.text {
+				font-family: $font-sans;
+				font-style: normal;
+				font-weight: 400;
+				font-size: 14px;
+				line-height: 24px;
+				/* or 171% */
+				color: $color-white;
+				opacity: 0.85;
+			}
+
+			&:hover {
+				background-color: $color-secondary;
+			}
+		}
+	}
 }
 
 /*** main-index-post index.php ***/

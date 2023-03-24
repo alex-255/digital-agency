@@ -104,7 +104,7 @@ get_header();
     <h2 class="our-works__header" data-after="<?php echo get_template_directory_uri() . "/assets/images/star-in-header.svg"; ?>">
         Our works
     </h2>
-    <div id="our-works-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
+    <div id="our-works-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="40000">
         <div class="carousel-inner">
             <?php
                 // Arguments
@@ -127,7 +127,9 @@ get_header();
                                     
                                 </div>
                                 <div class="carousel-caption d-none d-md-block">
-                                    <a href="<?php the_permalink(); ?>"></a>
+                                    <a href="<?php the_permalink(); ?>">
+                                        <p><?php the_title(); ?></p>
+                                    </a>
                                 </div>
                             </div>
                         <?php
@@ -146,6 +148,50 @@ get_header();
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
+    </div>
+    <div class="link-right-wrapper">
+        <a href="#about-us-section" class="link-right"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/button-with-arrow-black.svg"/></a>
+    </div>
+</section>
+<section id="about-us-section" class="container-xxl">
+    <h2 class="about-us-section__header">What people are saying about us</h2>
+
+    <div class="about-us-section__slider">
+    <?php
+    // Arguments
+    $args = array(
+        'posts_per_page' => -1,
+        'post_type' => 'testimonial'
+    );
+
+    // The Query
+    $the_query = new WP_Query( $args );
+
+    // The Loop
+    if ( $the_query->have_posts() ) {
+
+        while ( $the_query->have_posts() ) {
+            $the_query->the_post(); ?>
+                    <div class="about-us-section__slider__item">
+                        <div class="meta">
+                            <div class="col-12 col-md-2 image">
+                                <img  src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'thumbnail'); ?>" />
+                            </div>
+                            <div class="col-12 col-md-10 name">
+                                <h2><?php the_title(); ?></h2>
+                                <p><?php echo esc_html(get_field('occupation')); ?> </p>
+                            </div>
+                        </div>
+                        <div class="col-12 text">
+                            <p><?php echo esc_html(wp_trim_words(get_the_content(), 30)); ?> </p>
+                        </div>
+                        
+                    </div>
+            <?php
+        }
+    } 
+    /* Restore original Post Data */
+    wp_reset_postdata(); ?>
     </div>
 </section>
 
