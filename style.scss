@@ -859,7 +859,8 @@ a:hover {
 		&__item {
 			padding: 32px;
 			transition: all 0.3s;
-			
+			height: 100%;
+
 			.meta {
 				display: flex;
 				margin-bottom: 24px;
@@ -952,7 +953,120 @@ a:hover {
 	}
 }
 
+/*** blog-posts section ***/
+#blog-posts {
+	background-color: $color-cream;
+	padding: 80px 112px;
 
+	.blog-posts__header {
+		display: inline-block;
+		font-family: $font-sans;
+		font-style: normal;
+		font-weight: 700;
+		font-size: 48px;
+		line-height: 150%;
+		/* identical to box height, or 72px */
+		letter-spacing: -0.02em;
+		color: $color-secondary;
+		position: relative;
+		margin-bottom: 50px;
+
+		&::after {
+			content: url("./assets/images/our-blog-posts.svg");
+			position: absolute;
+			width: 80px;
+			height: 80px;
+			right: -100px;
+		}
+	}
+
+	.blog-posts__image {
+		a {
+			border: none;
+		}
+
+		img {
+			width: 100%;
+			aspect-ratio: 4/3;
+			object-fit: cover;
+			display: inline-block;
+			border: 0px solid $color-yellow;
+			transition: all 0.3s;
+
+			&:hover {
+				border: 18px solid $color-yellow;
+				transition: all 0.3s;
+			}
+		}
+	}
+
+	.blog-posts__text {
+		small {
+			font-family: $font-sans;
+			font-style: normal;
+			font-weight: 600;
+			font-size: 14px;
+			line-height: 24px;
+			/* identical to box height, or 171% */
+			color: $color-secondary;
+			opacity: 0.5;
+		}
+
+		h3 {
+			font-family: $font-sans;
+			font-style: normal;
+			font-weight: 700;
+			font-size: 24px;
+			line-height: 32px;
+			/* identical to box height, or 133% */
+			color: $color-secondary;
+		}
+
+		p {
+			font-family: $font-sans;
+			font-style: normal;
+			font-weight: 600;
+			font-size: 14px;
+			line-height: 24px;
+			/* identical to box height, or 171% */
+			color: $color-secondary;
+			opacity: 0.5;
+		}
+
+		.read-more-link {
+			font-family: $font-sans;
+			font-style: normal;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 24px;
+			/* identical to box height, or 150% */
+			color: $color-secondary;
+			display: inline-block;
+			position: relative;
+			border-bottom: none;
+
+			&::after {
+				content: "\F138";
+				font-family: "bootstrap-icons";
+				position: absolute;
+				font-size: 25px;
+				top: 50%;
+				right: -33px;
+				transform: translateY(-50%);
+				transition: all 0.3s;
+			}
+
+			&:hover {
+				color: $color-primary;
+
+				&::after {
+					transform: translateY(-50%) rotate(-45deg);
+					color: $color-primary;
+				}
+			}
+		}
+	}
+}
 
 /*** main-index-post index.php ***/
 

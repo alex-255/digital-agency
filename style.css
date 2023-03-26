@@ -762,6 +762,7 @@ a:hover {
 #about-us-section .about-us-section__slider__item {
   padding: 32px;
   transition: all 0.3s;
+  height: 100%;
 }
 #about-us-section .about-us-section__slider__item .meta {
   display: flex;
@@ -842,6 +843,105 @@ a:hover {
   content: "\f12f";
   font-family: "bootstrap-icons";
   font-size: 42px;
+}
+
+/*** blog-posts section ***/
+#blog-posts {
+  background-color: #EBE2D9;
+  padding: 80px 112px;
+}
+#blog-posts .blog-posts__header {
+  display: inline-block;
+  font-family: "Nunito Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 150%;
+  /* identical to box height, or 72px */
+  letter-spacing: -0.02em;
+  color: #020E10;
+  position: relative;
+  margin-bottom: 50px;
+}
+#blog-posts .blog-posts__header::after {
+  content: url("./assets/images/our-blog-posts.svg");
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  right: -100px;
+}
+#blog-posts .blog-posts__image a {
+  border: none;
+}
+#blog-posts .blog-posts__image img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  display: inline-block;
+  border: 0px solid #FFC42C;
+  transition: all 0.3s;
+}
+#blog-posts .blog-posts__image img:hover {
+  border: 18px solid #FFC42C;
+  transition: all 0.3s;
+}
+#blog-posts .blog-posts__text small {
+  font-family: "Nunito Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  /* identical to box height, or 171% */
+  color: #020E10;
+  opacity: 0.5;
+}
+#blog-posts .blog-posts__text h3 {
+  font-family: "Nunito Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  /* identical to box height, or 133% */
+  color: #020E10;
+}
+#blog-posts .blog-posts__text p {
+  font-family: "Nunito Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  /* identical to box height, or 171% */
+  color: #020E10;
+  opacity: 0.5;
+}
+#blog-posts .blog-posts__text .read-more-link {
+  font-family: "Nunito Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+  color: #020E10;
+  display: inline-block;
+  position: relative;
+  border-bottom: none;
+}
+#blog-posts .blog-posts__text .read-more-link::after {
+  content: "\f138";
+  font-family: "bootstrap-icons";
+  position: absolute;
+  font-size: 25px;
+  top: 50%;
+  right: -33px;
+  transform: translateY(-50%);
+  transition: all 0.3s;
+}
+#blog-posts .blog-posts__text .read-more-link:hover {
+  color: #016170;
+}
+#blog-posts .blog-posts__text .read-more-link:hover::after {
+  transform: translateY(-50%) rotate(-45deg);
+  color: #016170;
 }
 
 /*** main-index-post index.php ***/

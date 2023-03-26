@@ -183,7 +183,7 @@ get_header();
                             </div>
                         </div>
                         <div class="col-12 text">
-                            <p><?php echo esc_html(wp_trim_words(get_the_content(), 30)); ?> </p>
+                            <p><?php echo esc_html(wp_trim_words(get_the_content(), 28)); ?> </p>
                         </div>
                         
                     </div>
@@ -195,13 +195,15 @@ get_header();
     </div>
 </section>
 
-<div class="container-xxl main-post">
-
+<section id="blog-posts" class="container-xxl">
+    <h2 class="blog-posts__header">See our blog posts</h2>
+    <div class="row">
     <?php
     // Arguments
     $args = array(
-        'posts_per_page' => 10,
-        'post_type' => 'post'
+        'posts_per_page' => 4,
+        'post_type' => 'post',
+        'ignore_sticky_posts' => 1
     );
 
     // The Query
@@ -212,23 +214,27 @@ get_header();
 
         while ( $the_query->have_posts() ) {
             $the_query->the_post(); ?>
-                <div class="row">
-                    <div class="col-12 col-lg-7 main-post--image">
-                        <img  src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large'); ?>" />
+
+                    <div class="col-12 col-lg-6 p-2">
+                        <div class="row">
+                            <div class="col-12 col-lg-6 blog-posts__image">
+                            <a href="<?php the_permalink(); ?>"><img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'medium'); ?>" /></a>
+                            </div>
+                            <div class="col-12 col-lg-6 blog-posts__text">
+                                <small><?php echo get_the_date('F j, Y'); ?></small>
+                                <h3><?php the_title(); ?></h3>
+                                <p><?php echo wp_trim_words(get_the_content(), 15); ?> </p>
+                                <a href="<?php the_permalink(); ?>" class="read-more-link">Read more</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-12 col-lg-5 main-post--content">
-                        <h2><?php the_title(); ?><?php echo (is_sticky(get_the_ID())) ? ' <i class="bi bi-star-fill"><span class="tooltiptext">Sticky post</span></i>' : "" ; ?></h2>
-                        <p><?php echo wp_trim_words(get_the_content(), 50); ?> <a href="<?php the_permalink(); ?>" class="read-more-link">Read more &raquo;</a></p>
-                    </div>
-                    <hr>
-                </div>
             <?php
         }
     } 
     /* Restore original Post Data */
     wp_reset_postdata(); ?>
-
-</div>
+    </div>
+</section>
 
 <?php
 get_footer(); 
