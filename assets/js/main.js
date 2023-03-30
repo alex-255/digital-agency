@@ -80,6 +80,12 @@ window.addEventListener("load", () => {
             slidesToShow: 3,
             slidesToScroll: 1
         });
+
+        $('#our-works-carousel').slick({
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 1
+        });
       });
 
 } )( jQuery );

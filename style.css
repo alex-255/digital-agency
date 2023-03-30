@@ -637,6 +637,27 @@ a:hover {
   padding: 100px 112px;
   background-color: #EBE2D9;
 }
+#our-works .slick-prev::before, #our-works .slick-next::before {
+  font-size: 40px;
+}
+#our-works .slick-prev {
+  width: 40px;
+  left: 20px;
+  z-index: 1;
+  opacity: 0.6;
+}
+#our-works .slick-prev:hover {
+  opacity: 0.8;
+}
+#our-works .slick-next {
+  width: 40px;
+  right: 20px;
+  z-index: 1;
+  opacity: 0.6;
+}
+#our-works .slick-next:hover {
+  opacity: 0.8;
+}
 
 .our-works__header {
   font-family: "Nunito Sans", sans-serif;
@@ -662,38 +683,28 @@ a:hover {
   z-index: 1;
 }
 
-.carousel-item .carousel-item--image {
+.our-works-carousel-item {
+  position: relative;
+}
+.our-works-carousel-item img {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+}
+.our-works-carousel-item .our-works-carousel-caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: all 0.3s;
   border: 0px solid transparent;
-  transition: all 0.3s;
-}
-.carousel-item .carousel-caption {
-  transition: all 0.3s;
-}
-.carousel-item:hover .carousel-item--image {
-  border: 50px solid #FFC42C;
-  transition: all 0.3s;
-}
-.carousel-item:hover .carousel-caption {
-  opacity: 1;
-  transition: all 0.3s;
-}
-
-.carousel-item--image {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 400px;
-  min-height: 400px;
-  background-color: #6C6C6C;
-}
-
-.carousel-caption {
   text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
   opacity: 0;
-  bottom: 10px;
-  padding: 0;
 }
-.carousel-caption a {
+.our-works-carousel-item .our-works-carousel-caption a {
+  position: absolute;
+  bottom: -40px;
   width: 100%;
   height: 100%;
   border: none;
@@ -703,36 +714,14 @@ a:hover {
   justify-content: flex-end;
   align-items: center;
 }
-.carousel-caption a p {
+.our-works-carousel-item .our-works-carousel-caption a p {
   font-size: 1.5rem;
   margin: 0;
 }
-
-.carousel-indicators button[type=button] {
-  height: 4px;
-  border: 1px solid rgba(0, 0, 0, 0.4);
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.carousel-indicators button[type=button].active {
-  border: 1px solid transparent;
-}
-
-.link-right-wrapper {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 80px;
-}
-.link-right-wrapper .link-right {
-  transform: rotate(45deg);
-  border: none;
-  transition: transform 0.3s linear;
-}
-.link-right-wrapper .link-right:hover {
-  border: none;
-  transform: rotate(135deg);
-  transition: transform 0.3s linear;
+.our-works-carousel-item:hover .our-works-carousel-caption {
+  border: 50px solid #FFC42C;
+  opacity: 1;
+  transition: all 0.3s;
 }
 
 /*** About us section ***/
@@ -821,25 +810,23 @@ a:hover {
   background-color: #020E10;
   transition: all 0.3s;
 }
-
-.slick-next {
+#about-us-section .slick-next {
   top: unset;
   bottom: -10px;
   right: 0px;
 }
-.slick-next::before {
+#about-us-section .slick-next::before {
   content: "\f138";
   font-family: "bootstrap-icons";
   font-size: 42px;
 }
-
-.slick-prev {
+#about-us-section .slick-prev {
   top: unset;
   bottom: -10px;
   left: unset;
   right: 60px;
 }
-.slick-prev::before {
+#about-us-section .slick-prev::before {
   content: "\f12f";
   font-family: "bootstrap-icons";
   font-size: 42px;
@@ -1206,7 +1193,7 @@ a:hover {
 /*** Footer ***/
 .footer {
   color: #FFFFFC;
-  background-color: #1A1A1A;
+  background-color: #020E10;
   min-height: 90px;
   /* 12px - bootstrap's padding. 50px - regular for this Wordpress Theme. */
   padding: 38px;
@@ -1288,7 +1275,7 @@ a:hover {
 }
 
 .footer .footer-menu li a {
-  color: #6C6C6C;
+  color: #FFFFFC;
   margin: 3px;
   border-bottom: 2px dotted transparent;
 }
@@ -1307,22 +1294,22 @@ a:hover {
 }
 
 .footer-info h4 {
-  font-family: "Playfair Display", serif;
+  font-family: "Nunito Sans", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 17px;
   text-transform: uppercase;
-  color: #6C6C6C;
+  color: #FFFFFC;
 }
 
 .footer-info p, .footer-info p a {
-  font-family: "Playfair Display", serif;
+  font-family: "Nunito Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
-  color: #FFFFFF;
+  color: #FFFFFC;
 }
 
 @media only screen and (max-width: 1199px) {

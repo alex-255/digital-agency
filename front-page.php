@@ -81,7 +81,7 @@ get_header();
         </div>
         <div class="col-12 col-md-6 col-lg-3">
             <div class="statistic-item">
-                <h2 id="projects-completed" data-max="540">0</h2>
+                <h2 id="projects-completed" data-max="450">0</h2>
                 <p>Projects Completed</p>
             </div>
         </div>
@@ -104,50 +104,40 @@ get_header();
     <h2 class="our-works__header" data-after="<?php echo get_template_directory_uri() . "/assets/images/star-in-header.svg"; ?>">
         Our works
     </h2>
-    <div id="our-works-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="40000">
-        <div class="carousel-inner">
-            <?php
-                // Arguments
-                $args = array(
-                    'posts_per_page' => -1,
-                    'post_type' => 'work',
-                    'order' => "ASC"
-                );
+    <div id="our-works-carousel">
+        <?php
+            // Arguments
+            $args = array(
+                'posts_per_page' => -1,
+                'post_type' => 'work',
+                'order' => "ASC"
+            );
 
-                // The Query
-                $the_query = new WP_Query( $args );
+            // The Query
+            $the_query = new WP_Query( $args );
 
-                // The Loop
-                if ( $the_query->have_posts() ) {
+            // The Loop
+            if ( $the_query->have_posts() ) {
 
-                    while ( $the_query->have_posts() ) {
-                        $the_query->the_post(); ?>
-                            <div class="carousel-item<?php if ($the_query->current_post == 0) { echo ' active'; } ?>">
-                                <div class="carousel-item--image d-block w-100" style="background-image: url(<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large'); ?>);">
-                                    
-                                </div>
-                                <div class="carousel-caption d-none d-md-block">
-                                    <a href="<?php the_permalink(); ?>">
-                                        <p><?php the_title(); ?></p>
-                                    </a>
-                                </div>
+                while ( $the_query->have_posts() ) {
+                    $the_query->the_post(); ?>
+                        <div class="our-works-carousel-item">
+                            <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large'); ?>" />
+                            <!-- <div class="carousel-item--image" style="background-image: url(<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large'); ?>);">
+                                
+                            </div> -->
+                            <div class="our-works-carousel-caption">
+                                <a href="<?php the_permalink(); ?>">
+                                    <p><?php the_title(); ?></p>
+                                </a>
                             </div>
-                        <?php
-                    }
+                        </div>
+                    <?php
+                }
 
-                } 
-                /* Restore original Post Data */
-                wp_reset_postdata(); ?>
-
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#our-works-carousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#our-works-carousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
+            } 
+            /* Restore original Post Data */
+            wp_reset_postdata(); ?>
     </div>
     <div class="link-right-wrapper">
         <a href="#about-us-section" class="link-right"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/button-with-arrow-black.svg"/></a>
