@@ -842,23 +842,23 @@ a:hover {
 // 	border: 1px solid transparent;
 // }
 
-// .link-right-wrapper {
-// 	display: flex;
-// 	justify-content: flex-end;
-// 	margin-top: 80px;
+.link-right-wrapper {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 80px;
 
-// 	.link-right {
-// 		transform: rotate(45deg);
-// 		border: none;
-// 		transition: transform 0.3s linear;
+	.link-right {
+		transform: rotate(45deg);
+		border: none;
+		transition: transform 0.3s linear;
 
-// 		&:hover {
-// 			border: none;
-// 			transform: rotate(135deg);
-// 			transition: transform 0.3s linear;
-// 		}
-// 	}
-// }
+		&:hover {
+			border: none;
+			transform: rotate(135deg);
+			transition: transform 0.3s linear;
+		}
+	}
+}
 
 /*** About us section ***/
 

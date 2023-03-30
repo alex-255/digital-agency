@@ -724,6 +724,22 @@ a:hover {
   transition: all 0.3s;
 }
 
+.link-right-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 80px;
+}
+.link-right-wrapper .link-right {
+  transform: rotate(45deg);
+  border: none;
+  transition: transform 0.3s linear;
+}
+.link-right-wrapper .link-right:hover {
+  border: none;
+  transform: rotate(135deg);
+  transition: transform 0.3s linear;
+}
+
 /*** About us section ***/
 #about-us-section {
   background-color: #016170;
