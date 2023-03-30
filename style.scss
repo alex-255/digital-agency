@@ -774,11 +774,6 @@ a:hover {
 		aspect-ratio: 1/1;
 	}
 
-	// img {
-		
-	// 	transition: all .3s;
-	// }
-
 	.our-works-carousel-caption {
 		position: absolute;
 		top: 0;
@@ -811,36 +806,16 @@ a:hover {
 	}
 
 	&:hover {
-		// img {
-			
-		// 	transition: all .3s;
-		// }
+
 
 		.our-works-carousel-caption {
 			border: 50px solid $color-yellow;
 			opacity: 1;
-			transition: all .3s;
-
 		}
 	}
 	
 	
 }
-
-
-
-
-
-// .carousel-indicators button[type=button] {
-// 	height: 4px;
-// 	border: 1px solid rgba(0,0,0, 0.4);
-// 	margin-top: 10px;
-// 	margin-bottom: 10px;
-// }
-
-// .carousel-indicators button[type=button].active {
-// 	border: 1px solid transparent;
-// }
 
 .link-right-wrapper {
 	display: flex;

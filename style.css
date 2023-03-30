@@ -721,7 +721,6 @@ a:hover {
 .our-works-carousel-item:hover .our-works-carousel-caption {
   border: 50px solid #FFC42C;
   opacity: 1;
-  transition: all 0.3s;
 }
 
 .link-right-wrapper {
