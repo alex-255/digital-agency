@@ -16,9 +16,9 @@ get_header();
                     <div class="row">
                         <div class="col-12 col-lg-8 main-index-post--image">
                             <?php if(has_post_thumbnail()) { ?>
-                                <img  src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large'); ?>" />
+                                <img  src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large'); ?>"  loading="lazy" />
                             <?php } else { ?>
-                                <img  src="<?php echo get_template_directory_uri() . "/assets/images/placeholder.jpg"?>" />
+                                <img  src="<?php echo get_template_directory_uri() . "/assets/images/placeholder.jpg"?>"  loading="lazy" />
                             <?php } ?> 
                             
                         </div>

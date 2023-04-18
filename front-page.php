@@ -208,7 +208,7 @@ get_header();
                     <div class="col-12 col-lg-6 p-2">
                         <div class="row">
                             <div class="col-12 col-lg-6 blog-posts__image">
-                            <a href="<?php the_permalink(); ?>"><img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'medium'); ?>" /></a>
+                            <a href="<?php the_permalink(); ?>"><img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'medium'); ?>"  loading="lazy" /></a>
                             </div>
                             <div class="col-12 col-lg-6 blog-posts__text">
                                 <small><?php echo get_the_date('F j, Y'); ?></small>
