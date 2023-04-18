@@ -948,7 +948,7 @@ a:hover {
 
 /*** main-index-post index.php ***/
 .main-index-post {
-  background-color: #1A1A1A;
+  background-color: #016170;
   color: #FFFFFC;
 }
 
@@ -985,6 +985,7 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px;
 }
 
 .main-index-post .paginate-links span, .main-index-post .paginate-links a {
@@ -1041,7 +1042,7 @@ a:hover {
 }
 /*** main-single-post single.php ***/
 .main-single-post {
-  background-color: #1A1A1A;
+  background-color: #016170;
   color: #FFFFFC;
 }
 
@@ -1052,7 +1053,7 @@ a:hover {
 .main-single-post .row hr {
   margin: 0 auto;
   width: calc(100% - 100px);
-  border-bottom: 2px solid rgba(127, 127, 127, 0.4);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
 }
 
 .main-single-post .paginate-links {
@@ -1103,7 +1104,7 @@ a:hover {
 
 /*** main-page-post page.php ***/
 .main-page-post {
-  background-color: #1A1A1A;
+  background-color: #016170;
   color: #FFFFFC;
 }
 
@@ -1114,7 +1115,7 @@ a:hover {
 .main-page-post .row hr {
   margin: 0 auto;
   width: calc(100% - 100px);
-  border-bottom: 2px solid rgba(127, 127, 127, 0.4);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
 }
 
 .main-page-post .paginate-links {
@@ -1202,7 +1203,7 @@ a:hover {
 }
 
 .wp-block-calendar table thead {
-  color: #1A1A1A;
+  color: #020E10;
 }
 
 /*** Footer ***/
@@ -1275,7 +1276,7 @@ a:hover {
 
 .footer .social-icons .bi::before {
   font-size: 18px;
-  color: #1A1A1A;
+  color: #020E10;
   vertical-align: middle;
 }
 

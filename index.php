@@ -15,7 +15,12 @@ get_header();
                 while ( have_posts() ) : the_post(); ?>
                     <div class="row">
                         <div class="col-12 col-lg-8 main-index-post--image">
-                            <img  src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large'); ?>" />
+                            <?php if(has_post_thumbnail()) { ?>
+                                <img  src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large'); ?>" />
+                            <?php } else { ?>
+                                <img  src="<?php echo get_template_directory_uri() . "/assets/images/placeholder.jpg"?>" />
+                            <?php } ?> 
+                            
                         </div>
                         <div class="col-12 col-lg-4 main-index-post--content">
                             <h2><?php the_title(); ?></h2>
