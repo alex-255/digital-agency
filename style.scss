@@ -152,16 +152,22 @@ input[type=text] {
 }
 
 .comment-form input[type=submit] {
-	background: #BD6900;
-	border-radius: 30px;
-	font-family: $font-main;
+	background: rgba($color-white, 0.7);
+	border-radius: 10px;
+	border: 2px solid $color-secondary;
+	font-family: $font-sans;
 	font-style: normal;
 	font-weight: 600;
 	font-size: 24px;
 	line-height: 29px;
 	text-transform: uppercase;
-	color: #FFFFFF;
+	color: $color-secondary;
 	padding: 10px 20px;
+}
+
+.comment-form input[type=submit]:hover {
+	// transform: translate(1px, -1px);
+	border-width: 1px 1px 3px 3px;
 }
 
 .comment-form input[type=checkbox] {
@@ -1182,6 +1188,7 @@ a:hover {
 .main-single-post {
 	background-color: $color-primary;
 	color: $color-white;
+	padding-top: 50px;
 }
 
 .main-single-post a {
@@ -1352,7 +1359,7 @@ a:hover {
 /*** Footer ***/
 .footer {
 	color: $color-white;
-	background-color: $color-secondary;
+	background-color: rgba($color-secondary, 0.95);
 	min-height: 90px;
 	/* 12px - bootstrap's padding. 50px - regular for this Wordpress Theme. */
 	padding: calc(50px - 12px);
@@ -1457,7 +1464,7 @@ a:hover {
 	font-family: $font-sans;
 	font-style: normal;
 	font-weight: 500;
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 17px;
 	text-transform: uppercase;
 	color: $color-white;
@@ -1467,7 +1474,7 @@ a:hover {
 	font-family: $font-sans;
 	font-style: normal;
 	font-weight: 400;
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 17px;
 	color: $color-white;
 }

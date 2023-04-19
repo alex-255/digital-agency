@@ -3,7 +3,7 @@
             <div class="col-12 col-lg-12 col-xl-4">
                 <div class="footer-logo-area">
                     <?php if(get_theme_mod( 'wb_site_logo' )) { ?>
-                        <a href="<?php echo site_url(); ?>"><img src="<?php echo get_theme_mod( 'wb_site_logo' ); ?>"></a>
+                        <a href="<?php echo site_url(); ?>"><img src="<?php echo get_theme_mod( 'wb_site_logo' ); ?>" alt="website logo"></a>
                     <?php } ?>
                     <div class="social-icons">
                         <?php wp_nav_menu( array(

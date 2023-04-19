@@ -127,16 +127,21 @@ input[type=text] {
 }
 
 .comment-form input[type=submit] {
-  background: #BD6900;
-  border-radius: 30px;
-  font-family: "Playfair Display", serif;
+  background: rgba(255, 255, 252, 0.7);
+  border-radius: 10px;
+  border: 2px solid #020E10;
+  font-family: "Nunito Sans", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
   line-height: 29px;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: #020E10;
   padding: 10px 20px;
+}
+
+.comment-form input[type=submit]:hover {
+  border-width: 1px 1px 3px 3px;
 }
 
 .comment-form input[type=checkbox] {
@@ -1044,6 +1049,7 @@ a:hover {
 .main-single-post {
   background-color: #016170;
   color: #FFFFFC;
+  padding-top: 50px;
 }
 
 .main-single-post a {
@@ -1209,7 +1215,7 @@ a:hover {
 /*** Footer ***/
 .footer {
   color: #FFFFFC;
-  background-color: #020E10;
+  background-color: rgba(2, 14, 16, 0.95);
   min-height: 90px;
   /* 12px - bootstrap's padding. 50px - regular for this Wordpress Theme. */
   padding: 38px;
@@ -1313,7 +1319,7 @@ a:hover {
   font-family: "Nunito Sans", sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 17px;
   text-transform: uppercase;
   color: #FFFFFC;
@@ -1323,7 +1329,7 @@ a:hover {
   font-family: "Nunito Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 17px;
   color: #FFFFFC;
 }
