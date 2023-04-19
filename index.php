@@ -16,8 +16,7 @@ get_header();
                     <div class="row">
                         <div class="col-12 col-lg-8 main-index-post--image">
                             <?php if(has_post_thumbnail()) { 
-                                $alt = get_post_meta( get_post_thumbnail_id(), '_wp_attachment_image_alt', true );
-                                var_dump( $alt ); ?>
+                                $alt = get_post_meta( get_post_thumbnail_id(), '_wp_attachment_image_alt', true ); ?>
                                 <img  src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large'); ?>" alt="<?php echo esc_html($alt); ?>" loading="lazy" />
                             <?php } else { ?>
                                 <img  src="<?php echo get_template_directory_uri() . "/assets/images/placeholder.jpg"?>" alt="placeholder" loading="lazy" />
