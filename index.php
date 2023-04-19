@@ -3,7 +3,7 @@ get_header();
 ?>
 
 <div class="container-xxl main-index-post">
-    <div class="row main-index-main-row" style="<?php echo (get_theme_mod( 'wb_sidebar_position' ) == "left") ? "" : "flex-direction: row-reverse;" ; ?>">
+    <div class="row main-index-main-row" style="<?php echo (get_theme_mod( 'wb_sidebar_position' ) != "right") ? "" : "flex-direction: row-reverse;" ; ?>">
         <div class="col-12 col-lg-3">
             <?php if ( is_active_sidebar( 'primary' ) ) { ?>
                 <?php dynamic_sidebar('primary'); ?>

@@ -1100,6 +1100,8 @@ a:hover {
 
 			&::after {
 				content: "";
+				width: 0;
+				height: 0;
 			}
 		}
 	}
@@ -1230,6 +1232,8 @@ a:hover {
 
 			&::after {
 				content: "";
+				width: 0;
+				height: 0;
 			}
 		}
 
