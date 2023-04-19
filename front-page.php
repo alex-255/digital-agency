@@ -208,7 +208,7 @@ get_header();
         while ( $the_query->have_posts() ) {
             $the_query->the_post(); ?>
 
-                    <div class="col-12 col-md-6 p-2">
+                    <div class="col-12 col-md-6 py-4 px-0 p-md-2">
                         <div class="row">
                             <div class="col-12 col-lg-6 blog-posts__image">
                             <a href="<?php the_permalink(); ?>"><img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'medium'); ?>" alt="link to blog post <?php the_title(); ?>" loading="lazy" /></a>

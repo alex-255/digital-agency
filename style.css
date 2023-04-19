@@ -160,12 +160,22 @@ form.comment-form label {
 }
 
 @media only screen and (max-width: 1000px) {
+  .comments {
+    padding: 5vw;
+  }
   .comment-form textarea {
     width: 100%;
   }
   .comment-form input[type=text] {
     /* 80px is min-width of label */
     width: calc(100% - 85px);
+  }
+  .form-submit {
+    text-align: center;
+  }
+  .comment-form input[type=submit] {
+    display: block;
+    width: 100%;
   }
 }
 @media only screen and (max-width: 500px) {
@@ -806,7 +816,7 @@ a:hover {
 
 @media (max-width: 900px) {
   #our-works {
-    padding: 10vw;
+    padding: 10vw 5vw;
   }
   .our-works__header {
     font-size: 7vw;
@@ -1049,6 +1059,7 @@ a:hover {
   }
   #blog-posts .blog-posts__header {
     font-size: 7vw;
+    margin-bottom: 0;
   }
   #blog-posts .blog-posts__header::after {
     content: "";
@@ -1203,7 +1214,7 @@ a:hover {
 }
 
 .main-single-post--content {
-  padding: 50px 50px 50px 50px;
+  padding: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1218,6 +1229,14 @@ a:hover {
   width: 100%;
 }
 
+@media (max-width: 900px) {
+  .main-single-post--image {
+    padding: 50px 0px;
+  }
+  .main-single-post--content {
+    padding: 5vw;
+  }
+}
 /*** main-page-post page.php ***/
 .main-page-post {
   background-color: #016170;
