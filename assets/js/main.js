@@ -1,11 +1,11 @@
 window.addEventListener("load", () => {
-    var menuBar = document.getElementsByClassName("navigation-bar");
-    const menuHamburger = document.querySelector(".navigation-bar-hamburger");
+    const menuBar = document.getElementById("navigation-bar");
+    const menuHamburger = document.getElementById("navigation-bar-hamburger");
     
     
     menuHamburger.onclick  = function(){
         menuHamburger.classList.toggle("menu-opened");
-        menuBar[0].classList.toggle("menu-opened");
+        menuBar.classList.toggle("menu-opened");
         // document.querySelector('.menu-opened .logo-area').style.display = "flex";       
         // menuHamburgerOpened = document.querySelector(".navigation-bar-hamburger.menu-opened");
     };

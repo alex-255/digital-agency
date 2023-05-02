@@ -6,8 +6,8 @@
     <?php wp_head(); ?>
   </head>
   <body <?php body_class(); ?>>
-    <div class="navigation-bar container-xxl px-5">
-        <div class="navigation-bar-hamburger">
+    <div id="navigation-bar" class="container-xxl px-5">
+        <div id="navigation-bar-hamburger">
         </div>
         <div class="row">
           <div class="col-12 col-lg-3 logo-area">
